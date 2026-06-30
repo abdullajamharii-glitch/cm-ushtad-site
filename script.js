@@ -191,7 +191,76 @@ function initBookFilters() {
 }
 
 /* ══════════════════════════════════════
+   INTERACTIVE ELEMENTS & ANIMATIONS
+   ══════════════════════════════════════ */
+function initInteractiveElements() {
+  // ── Nav Dropdown Menu ──
+  const dropdownToggle = document.querySelector(".nav-dropdown-toggle");
+  const dropdownMenu   = document.querySelector(".nav-dropdown-menu");
+
+  if (dropdownToggle && dropdownMenu) {
+    dropdownToggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isExpanded = dropdownToggle.getAttribute("aria-expanded") === "true";
+      dropdownToggle.setAttribute("aria-expanded", String(!isExpanded));
+      dropdownMenu.classList.toggle("open");
+    });
+
+    document.addEventListener("click", () => {
+      dropdownToggle.setAttribute("aria-expanded", "false");
+      dropdownMenu.classList.remove("open");
+    });
+  }
+
+  // ── Scroll Reveal Intersection Observer ──
+  const revealElements = document.querySelectorAll(".scroll-reveal, .timeline-node, .section");
+  
+  if (revealElements.length && 'IntersectionObserver' in window) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in-view");
+          observer.unobserve(entry.target); // Trigger only once
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px"
+    });
+
+    revealElements.forEach(el => revealObserver.observe(el));
+  }
+
+  // ── Timeline Scroll Progress Line ──
+  const timelineContainer = document.querySelector(".timeline-container");
+  const progressLine       = document.querySelector(".timeline-progress-line");
+
+  if (timelineContainer && progressLine) {
+    function updateTimelineProgress() {
+      const rect = timelineContainer.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      // Calculate scroll progress from middle of window
+      const start = rect.top - windowHeight / 2;
+      const totalHeight = rect.height;
+      
+      let progress = 0;
+      if (start < 0) {
+        progress = Math.min(100, Math.max(0, (-start / totalHeight) * 100));
+      }
+      
+      timelineContainer.style.setProperty("--timeline-height", `${progress}%`);
+    }
+
+    window.addEventListener("scroll", updateTimelineProgress);
+    window.addEventListener("resize", updateTimelineProgress);
+    updateTimelineProgress(); // Initial check
+  }
+}
+
+/* ══════════════════════════════════════
    INIT
-══════════════════════════════════════ */
+   ══════════════════════════════════════ */
 renderSite();
 initBookFilters();
+initInteractiveElements();

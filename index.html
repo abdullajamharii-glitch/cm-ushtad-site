@@ -8,7 +8,9 @@
       content="A professional archive website concept for CM Usthad, C. M. Abdulla Moulavi, covering biography, writings, case records, articles, images, news, and testimonials."
     >
     <title>CM Usthad Archive</title>
-    <link rel="preconnect" href="https://www.micedu.in">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="data/content.js"></script>
   </head>
@@ -29,7 +31,16 @@
       </button>
 
       <nav class="site-nav" aria-label="Primary navigation">
-        <a href="#bio">Bio</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-haspopup="true">
+            Bio
+            <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l4 4 4-4"/></svg>
+          </button>
+          <div class="nav-dropdown-menu">
+            <a href="#bio">Biography</a>
+            <a href="#timeline">Timeline</a>
+          </div>
+        </div>
         <a href="#books">Books</a>
         <a href="#case-diary">Case Diary</a>
         <a href="#articles">Articles</a>
@@ -44,23 +55,28 @@
     </header>
 
     <main id="top">
-      <section class="hero" aria-labelledby="hero-title">
-        <img
-          class="hero-portrait"
-          src="https://www.micedu.in/cmusthad.png"
-          alt="Portrait of CM Abdulla Moulavi"
-        >
+      <section class="hero scroll-reveal" aria-labelledby="hero-title">
         <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <p class="eyebrow">Scholar. Qazi. Writer. Educator.</p>
-          <h1 id="hero-title">CM Abdulla Moulavi</h1>
-          <p class="hero-copy">
-            A dedicated archive for Chembirika Qazi, preserving his life, writings,
-            institutional vision, public service, and continuing search for documented truth.
-          </p>
-          <div class="hero-actions" aria-label="Primary links">
-            <a class="button primary" href="#bio">Explore legacy</a>
-            <a class="button ghost" href="#contribute">Contribute material</a>
+        <div class="hero-container">
+          <div class="hero-media">
+            <div class="hero-glow"></div>
+            <img
+              class="hero-portrait"
+              src="https://www.micedu.in/cmusthad.png"
+              alt="Portrait of CM Abdulla Moulavi"
+            >
+          </div>
+          <div class="hero-content">
+            <p class="eyebrow">Scholar. Qazi. Writer. Educator.</p>
+            <h1 id="hero-title">CM Abdulla Moulavi</h1>
+            <p class="hero-copy">
+              A dedicated archive for Chembirika Qazi, preserving his life, writings,
+              institutional vision, public service, and continuing search for documented truth.
+            </p>
+            <div class="hero-actions" aria-label="Primary links">
+              <a class="button primary" href="#bio">Explore legacy</a>
+              <a class="button ghost" href="#contribute">Contribute material</a>
+            </div>
           </div>
         </div>
       </section>
@@ -88,7 +104,7 @@
         </article>
       </section>
 
-      <section class="section editorial" id="bio">
+      <section class="section editorial scroll-reveal" id="bio">
         <div class="section-heading">
           <p class="eyebrow">Biography</p>
           <h2>A life shaped by learning, leadership, and public duty.</h2>
@@ -107,35 +123,97 @@
               institutions that carried his educational vision forward.
             </p>
           </div>
-          <ol class="timeline" aria-label="Biography timeline">
-            <li>
-              <time>1933</time>
-              <span>Born in Chembirika, Kasaragod district.</span>
-            </li>
-            <li>
-              <time>1962</time>
-              <span>Completed Maulvi Fadhil Baqawi studies at Baqiyat al-Swalihat, Vellore.</span>
-            </li>
-            <li>
-              <time>1973</time>
-              <span>Inherited local qazi responsibilities after his father's passing.</span>
-            </li>
-            <li>
-              <time>1993</time>
-              <span>Founded Malabar Islamic Complex in Chattanchal.</span>
-            </li>
-            <li>
-              <time>2010</time>
-              <span>Passed away on 15 February; the public case remains part of his legacy record.</span>
-            </li>
-          </ol>
+          <div class="bio-quote-card">
+            <svg class="quote-icon" width="40" height="32" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.4286 0C5.12 0 0 5.23077 0 11.6923C0 21.0462 7.02857 30.1538 17.1429 32L18.8571 27.6923C12.5486 25.8462 8.57143 20.9231 8.57143 17.2308H17.1429V6.15385H8.57143C8.57143 4.30769 10 3.07692 11.4286 3.07692V0ZM32.8571 0C26.5486 0 21.4286 5.23077 21.4286 11.6923C21.4286 21.0462 28.4571 30.1538 38.5714 32L40 27.6923C33.6914 25.8462 29.7143 20.9231 29.7143 17.2308H38.2857V6.15385H29.7143C29.7143 4.30769 31.1429 3.07692 32.8571 3.07692V0Z" fill="currentColor"/>
+            </svg>
+            <blockquote>
+              His vision was to synthesize the eternal values of faith with the progressive tools of science, mathematics, and institutional excellence.
+            </blockquote>
+            <cite>Archive Editorial Committee</cite>
+          </div>
         </div>
       </section>
 
-      <section class="section knowledge-band" aria-labelledby="knowledge-title">
-        <div class="section-heading compact">
-          <p class="eyebrow">Fields of work</p>
-          <h2 id="knowledge-title">The archive is organized around the subjects he returned to repeatedly.</h2>
+      <section class="section timeline-section scroll-reveal" id="timeline">
+        <div class="section-heading">
+          <p class="eyebrow">Interactive Timeline</p>
+          <h2>A chronological journey through a life of service.</h2>
+        </div>
+        <div class="timeline-container">
+          <div class="timeline-progress-line"></div>
+          
+          <div class="timeline-node scroll-reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <time class="timeline-date">1933</time>
+              <h3>Born in Chembirika</h3>
+              <p>CM Abdulla Moulavi was born in the coastal village of Chembirika in Kasaragod, Kerala, to a family of esteemed theologians and scholars.</p>
+            </div>
+            <div class="timeline-media">
+              <img src="data/chembirika_coastal.png" alt="Chembirika Coastal landscape Kasaragod" loading="lazy">
+            </div>
+          </div>
+
+          <div class="timeline-node scroll-reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <time class="timeline-date">1962</time>
+              <h3>Scholarly Graduation</h3>
+              <p>He graduated as a <i>Maulvi Fadhil Baqawi</i> from Baqiyat al-Swalihat in Vellore, mastering Islamic law, languages, and astronomical calculation sciences.</p>
+            </div>
+            <div class="timeline-media">
+              <img src="data/vellore_scholarly.png" alt="Baqiyat al-Swalihat study and books" loading="lazy">
+            </div>
+          </div>
+
+          <div class="timeline-node scroll-reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <time class="timeline-date">1973</time>
+              <h3>Appointed Chief Qazi</h3>
+              <p>He took up responsibilities as Qazi of Chembirika and went on to serve as Chief Qazi for numerous mahals across Kasaragod and South Karnataka, settling disputes and guiding the community.</p>
+            </div>
+            <div class="timeline-media">
+              <img src="data/qazi_mahal.png" alt="Qazi mahal traditional mosque" loading="lazy">
+            </div>
+          </div>
+
+          <div class="timeline-node scroll-reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <time class="timeline-date">1993</time>
+              <h3>Founding the Malabar Islamic Complex</h3>
+              <p>CM Usthad founded the Malabar Islamic Complex (MIC) in Chattanchal, establishing an academy where religious sciences and modern secondary education are taught side by side.</p>
+            </div>
+            <div class="timeline-media">
+              <img src="https://www.micedu.in/college.png" alt="Malabar Islamic Complex campus building" loading="lazy">
+            </div>
+          </div>
+
+          <div class="timeline-node scroll-reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <time class="timeline-date">2010</time>
+              <h3>Legacy and Eternal Memory</h3>
+              <p>CM Usthad passed away on 15 February 2010. His legacy endures through the ongoing search for documented truth, his books, and the educational systems he founded.</p>
+            </div>
+            <div class="timeline-media">
+              <img src="https://www.micedu.in/masjid.png" alt="MIC campus masjid in Chattanchal" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section knowledge-band scroll-reveal" aria-labelledby="knowledge-title">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Fields of work</p>
+            <h2 id="knowledge-title">The archive is organized around the subjects he returned to repeatedly.</h2>
+          </div>
+          <p class="section-desc">
+            His intellectual legacy spans classical Islamic theology, complex mathematics, observational astronomy, and multilingual translations, bridging traditional sciences with empirical observation.
+          </p>
         </div>
         <div class="knowledge-grid">
           <article>
