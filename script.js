@@ -213,10 +213,11 @@ function initInteractiveElements() {
   }
 
   // ── Scroll Reveal Intersection Observer ──
-  const revealElements = document.querySelectorAll(".scroll-reveal, .timeline-node, .section");
+  const revealElements = document.querySelectorAll(".scroll-reveal:not(.hidden), .timeline-node:not(.hidden), .section");
+  let revealObserver;
   
-  if (revealElements.length && 'IntersectionObserver' in window) {
-    const revealObserver = new IntersectionObserver((entries, observer) => {
+  if ('IntersectionObserver' in window) {
+    revealObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add("in-view");
@@ -229,6 +230,34 @@ function initInteractiveElements() {
     });
 
     revealElements.forEach(el => revealObserver.observe(el));
+  }
+
+  // ── Timeline Read More Toggle ──
+  const btnTimelineReadMore = document.getElementById("btnTimelineReadMore");
+  const collapsedNodes      = document.querySelectorAll(".timeline-node.timeline-collapsed");
+
+  if (btnTimelineReadMore && collapsedNodes.length) {
+    btnTimelineReadMore.addEventListener("click", () => {
+      const isHiding = !collapsedNodes[0].classList.contains("hidden");
+      
+      collapsedNodes.forEach(node => {
+        if (isHiding) {
+          node.classList.add("hidden");
+          node.classList.remove("in-view");
+        } else {
+          node.classList.remove("hidden");
+          if (revealObserver) {
+            revealObserver.observe(node);
+          }
+        }
+      });
+
+      btnTimelineReadMore.textContent = isHiding ? "Read more..." : "Read less...";
+
+      if (isHiding) {
+        document.getElementById("timeline").scrollIntoView({ behavior: "smooth" });
+      }
+    });
   }
 
   // ── Timeline Scroll Progress Line ──
