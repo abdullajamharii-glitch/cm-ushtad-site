@@ -279,27 +279,37 @@ textarea {
 
 .hero-portrait-frame {
   position: relative;
-  border-radius: 200px 200px 24px 24px;
-  padding: 12px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: inset 0 0 30px rgba(255, 255, 255, 0.05), 0 24px 60px rgba(0, 0, 0, 0.4);
+  border-radius: var(--radius);
+  padding: 16px;
+  background: var(--white);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
   display: flex;
   justify-content: center;
   align-items: center;
   max-width: 380px;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
+  transition: transform 300ms ease;
 }
 
 .hero-portrait-frame::before {
   content: "";
   position: absolute;
-  inset: 4px;
-  border-radius: 196px 196px 20px 20px;
+  z-index: -1;
+  inset: -8px 8px 8px -8px; /* shifted bottom-left */
   border: 1px solid var(--brass);
-  opacity: 0.6;
+  border-radius: var(--radius);
+  opacity: 0.8;
   pointer-events: none;
+  transition: transform 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hero-portrait-frame:hover {
+  transform: translateY(-4px);
+}
+
+.hero-portrait-frame:hover::before {
+  transform: translate(6px, -6px);
 }
 
 .hero-portrait {
@@ -309,9 +319,9 @@ textarea {
   height: auto;
   max-height: 480px;
   object-fit: cover;
-  border-radius: 190px 190px 16px 16px;
-  background: #042520;
-  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
+  border-radius: 6px;
+  background: linear-gradient(180deg, #052f28 0%, #0d4a3e 100%);
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.1));
 }
 
 .hero-overlay {
@@ -1452,9 +1462,19 @@ textarea {
     order: -1;
   }
 
-  .hero-portrait {
-    width: 65vw;
+  .hero-portrait-frame {
     max-width: 280px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+
+  .hero-portrait-frame::before {
+    inset: -6px 6px 6px -6px;
+  }
+
+  .hero-portrait {
+    width: 100%;
+    max-height: 320px;
   }
 
   .hero-actions {
