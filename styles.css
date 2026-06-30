@@ -277,51 +277,113 @@ textarea {
   z-index: 0;
 }
 
-.hero-portrait-frame {
+/* Celestial Portal Layout */
+.celestial-portal {
   position: relative;
-  border-radius: var(--radius);
-  padding: 16px;
-  background: var(--white);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25);
+  width: 380px;
+  height: 380px;
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 380px;
-  width: 100%;
   z-index: 2;
-  transition: transform 300ms ease;
 }
 
-.hero-portrait-frame::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: -8px 8px 8px -8px; /* shifted bottom-left */
-  border: 1px solid var(--brass);
-  border-radius: var(--radius);
-  opacity: 0.8;
-  pointer-events: none;
-  transition: transform 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+.portal-image-container {
+  width: 310px;
+  height: 310px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  z-index: 5;
+  background: linear-gradient(180deg, #042520 0%, #0d4d40 100%);
+  border: 4px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.hero-portrait-frame:hover {
-  transform: translateY(-4px);
-}
-
-.hero-portrait-frame:hover::before {
-  transform: translate(6px, -6px);
-}
-
-.hero-portrait {
+.celestial-portal .hero-portrait {
   position: relative;
   z-index: 1;
   width: 100%;
-  height: auto;
-  max-height: 480px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 6px;
-  background: linear-gradient(180deg, #052f28 0%, #0d4a3e 100%);
-  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.1));
+  object-position: center top;
+  border-radius: 50%;
+  transform: scale(1.05);
+  transition: transform 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.celestial-portal:hover .portal-image-container {
+  transform: scale(1.02);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+.celestial-portal:hover .hero-portrait {
+  transform: scale(1.12);
+}
+
+/* Rotating celestial rings representing astronomy */
+.celestial-ring {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.ring-outer {
+  width: 370px;
+  height: 370px;
+  border: 1px dashed var(--brass);
+  opacity: 0.6;
+  z-index: 2;
+  animation: rotate-clockwise 40s linear infinite;
+}
+
+.ring-inner {
+  width: 340px;
+  height: 340px;
+  border: 1px double rgba(191, 141, 67, 0.4);
+  z-index: 3;
+  animation: rotate-counter 25s linear infinite;
+}
+
+@keyframes rotate-clockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotate-counter {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+/* Floating badge for astronomical portal */
+.portal-badge {
+  position: absolute;
+  bottom: 12px;
+  right: -5px;
+  background: var(--white);
+  color: var(--green-deep);
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  z-index: 10;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--brass);
+  animation: float-badge 3s ease-in-out infinite alternate;
+}
+
+@keyframes float-badge {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-8px); }
 }
 
 .hero-overlay {
@@ -1462,19 +1524,30 @@ textarea {
     order: -1;
   }
 
-  .hero-portrait-frame {
-    max-width: 280px;
+  .celestial-portal {
+    width: 300px;
+    height: 300px;
     margin: 0 auto;
-    padding: 10px;
   }
 
-  .hero-portrait-frame::before {
-    inset: -6px 6px 6px -6px;
+  .portal-image-container {
+    width: 250px;
+    height: 250px;
   }
 
-  .hero-portrait {
-    width: 100%;
-    max-height: 320px;
+  .ring-outer {
+    width: 290px;
+    height: 290px;
+  }
+
+  .ring-inner {
+    width: 270px;
+    height: 270px;
+  }
+
+  .portal-badge {
+    bottom: 5px;
+    right: 15px;
   }
 
   .hero-actions {
