@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Dashboard — CM Usthad Archive</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard.css">
+  </head>
+  <body>
+
+    <!-- ═══ LOGIN SCREEN ═══ -->
+    <div id="loginScreen" class="login-screen">
+      <div class="login-card">
+        <div class="login-brand">
+          <div class="brand-mark">CM</div>
+          <div>
+            <h1>CM Usthad Archive</h1>
+            <p>Admin Dashboard</p>
+          </div>
+        </div>
+        <form id="loginForm" class="login-form" autocomplete="off">
+          <div class="field">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" placeholder="Enter admin password" autofocus>
+          </div>
+          <div id="loginError" class="login-error" hidden>Incorrect password. Please try again.</div>
+          <button type="submit" class="btn btn-primary btn-full">Sign in</button>
+        </form>
+        <p class="login-hint">Default password: <code>cmusthad2024</code></p>
+      </div>
+    </div>
+
+    <!-- ═══ DASHBOARD ═══ -->
+    <div id="dashboardApp" class="dashboard" hidden>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+          <div class="brand-mark">CM</div>
+          <div>
+            <strong>CM Usthad</strong>
+            <span>Archive Admin</span>
+          </div>
+        </div>
+
+        <nav class="sidebar-nav" id="sidebarNav">
+          <button class="nav-item active" data-section="overview" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+            Overview
+          </button>
+          <button class="nav-item" data-section="articles" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            Articles
+          </button>
+          <button class="nav-item" data-section="images" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+            Images
+          </button>
+          <button class="nav-item" data-section="books" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            Books
+          </button>
+          <button class="nav-item" data-section="news" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0-2 2z"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg>
+            News
+          </button>
+          <button class="nav-item" data-section="testimonials" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Testimonials
+          </button>
+          <button class="nav-item" data-section="casediary" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12h6"/><path d="M9 16h6"/><path d="M9 8h2"/><path d="M17 3H7a2 2 0 0 0-2 2v16l3-3 2 2 2-2 2 2 3 3V5a2 2 0 0 0-2-2z"/></svg>
+            Case Diary
+          </button>
+          <button class="nav-item" data-section="settings" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93A10 10 0 0 0 5 19.07M4.93 4.93A10 10 0 0 1 19.07 19.07M12 2v2M12 20v2M2 12h2M20 12h2"/></svg>
+            Settings
+          </button>
+        </nav>
+
+        <div class="sidebar-footer">
+          <a href="../index.html" target="_blank" class="view-site-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            View Public Site
+          </a>
+          <button id="logoutBtn" class="logout-btn" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16,17 21,12 16,7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+            Logout
+          </button>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+
+        <!-- Top Bar -->
+        <header class="topbar">
+          <div class="topbar-left">
+            <button class="sidebar-toggle" id="sidebarToggle" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            </button>
+            <h2 id="sectionTitle">Overview</h2>
+          </div>
+          <div class="topbar-right">
+            <button id="exportBtn" class="btn btn-ghost" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7,10 12,15 17,10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Export JSON
+            </button>
+            <label class="btn btn-ghost" for="importFile">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17,8 12,3 7,8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              Import JSON
+            </label>
+            <input type="file" id="importFile" accept=".json" style="display:none">
+          </div>
+        </header>
+
+        <!-- ── OVERVIEW ── -->
+        <section id="section-overview" class="section-content active">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon articles-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+              </div>
+              <div>
+                <span class="stat-number" id="statArticles">0</span>
+                <span class="stat-label">Articles</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon images-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
+              </div>
+              <div>
+                <span class="stat-number" id="statImages">0</span>
+                <span class="stat-label">Images</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon books-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </div>
+              <div>
+                <span class="stat-number" id="statBooks">0</span>
+                <span class="stat-label">Books</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon news-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 0-2 2z"/></svg>
+              </div>
+              <div>
+                <span class="stat-number" id="statNews">0</span>
+                <span class="stat-label">News Items</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon testimonials-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+              </div>
+              <div>
+                <span class="stat-number" id="statTestimonials">0</span>
+                <span class="stat-label">Testimonials</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon case-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3H7a2 2 0 0 0-2 2v16l3-3 2 2 2-2 2 2 3 3V5a2 2 0 0 0-2-2z"/></svg>
+              </div>
+              <div>
+                <span class="stat-number" id="statCase">0</span>
+                <span class="stat-label">Case Entries</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="overview-actions">
+            <h3>Quick Actions</h3>
+            <div class="quick-actions">
+              <button class="quick-action-btn" data-section="articles" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                Add Article
+              </button>
+              <button class="quick-action-btn" data-section="images" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                Add Image
+              </button>
+              <button class="quick-action-btn" data-section="books" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                Add Book
+              </button>
+              <button class="quick-action-btn" data-section="news" type="button">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+                Add News
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ── ARTICLES ── -->
+        <section id="section-articles" class="section-content">
+          <div class="section-toolbar">
+            <button class="btn btn-primary" id="addArticleBtn" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Add Article
+            </button>
+          </div>
+          <div class="items-grid" id="articlesList"></div>
+        </section>
+
+        <!-- ── IMAGES ── -->
+        <section id="section-images" class="section-content">
+          <div class="section-toolbar">
+            <button class="btn btn-primary" id="addImageBtn" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Add Image
+            </button>
+          </div>
+          <div class="gallery-admin-grid" id="imagesList"></div>
+        </section>
+
+        <!-- ── BOOKS ── -->
+        <section id="section-books" class="section-content">
+          <div class="section-toolbar">
+            <button class="btn btn-primary" id="addBookBtn" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Add Book
+            </button>
+          </div>
+          <div class="items-grid" id="booksList"></div>
+        </section>
+
+        <!-- ── NEWS ── -->
+        <section id="section-news" class="section-content">
+          <div class="section-toolbar">
+            <button class="btn btn-primary" id="addNewsBtn" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Add News
+            </button>
+          </div>
+          <div class="items-list" id="newsList"></div>
+        </section>
+
+        <!-- ── TESTIMONIALS ── -->
+        <section id="section-testimonials" class="section-content">
+          <div class="section-toolbar">
+            <button class="btn btn-primary" id="addTestimonialBtn" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Add Testimonial
+            </button>
+          </div>
+          <div class="items-grid" id="testimonialsList"></div>
+        </section>
+
+        <!-- ── CASE DIARY ── -->
+        <section id="section-casediary" class="section-content">
+          <div class="section-toolbar">
+            <button class="btn btn-primary" id="addCaseBtn" type="button">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              Add Case Entry
+            </button>
+          </div>
+          <div class="items-list" id="caseDiaryList"></div>
+        </section>
+
+        <!-- ── SETTINGS ── -->
+        <section id="section-settings" class="section-content">
+          <div class="settings-panel">
+            <h3>Site Settings</h3>
+            <form id="settingsForm" class="settings-form">
+              <div class="field">
+                <label for="settSiteTitle">Site Title</label>
+                <input type="text" id="settSiteTitle" placeholder="CM Usthad Archive">
+              </div>
+              <div class="field">
+                <label for="settHeroCopy">Hero Description</label>
+                <textarea id="settHeroCopy" rows="3"></textarea>
+              </div>
+              <div class="field">
+                <label for="settBioText1">Biography Paragraph 1</label>
+                <textarea id="settBioText1" rows="4"></textarea>
+              </div>
+              <div class="field">
+                <label for="settBioText2">Biography Paragraph 2</label>
+                <textarea id="settBioText2" rows="4"></textarea>
+              </div>
+
+              <div class="field">
+                <label for="settAdminPassword">Change Admin Password</label>
+                <input type="password" id="settAdminPassword" placeholder="Enter new password">
+              </div>
+              <div class="settings-actions">
+                <button type="submit" class="btn btn-primary">Save Settings</button>
+                <button type="button" id="resetBtn" class="btn btn-danger">Reset All to Defaults</button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+      </main>
+    </div>
+
+    <!-- ═══ MODAL ═══ -->
+    <div id="modal" class="modal-overlay" hidden>
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3 id="modalTitle">Add Item</h3>
+          <button class="modal-close" id="modalClose" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+        <div id="modalBody" class="modal-body"></div>
+        <div class="modal-footer">
+          <button class="btn btn-ghost" id="modalCancel" type="button">Cancel</button>
+          <button class="btn btn-primary" id="modalSave" type="button">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ TOAST ═══ -->
+    <div id="toast" class="toast" hidden></div>
+
+    <!-- ═══ CONFIRM DIALOG ═══ -->
+    <div id="confirmOverlay" class="modal-overlay" hidden>
+      <div class="modal-card confirm-card">
+        <div class="modal-header">
+          <h3>Confirm Delete</h3>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to delete this item? This action cannot be undone.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-ghost" id="confirmCancel" type="button">Cancel</button>
+          <button class="btn btn-danger" id="confirmDelete" type="button">Delete</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../data/content.js"></script>
+    <script src="dashboard.js"></script>
+  </body>
+</html>

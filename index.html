@@ -10,6 +10,7 @@
     <title>CM Usthad Archive</title>
     <link rel="preconnect" href="https://www.micedu.in">
     <link rel="stylesheet" href="styles.css">
+    <script src="data/content.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -257,31 +258,8 @@
           </div>
           <a class="text-link" href="#contribute">Submit article</a>
         </div>
-        <div class="article-grid">
-          <article class="article-card">
-            <img src="https://www.micedu.in/masjid.png" alt="MIC campus masjid">
-            <div>
-              <span>Research</span>
-              <h3>The scholar who measured direction</h3>
-              <p>A feature on astronomy, prayer timing, qibla science, and the discipline of observation.</p>
-            </div>
-          </article>
-          <article class="article-card">
-            <img src="https://www.micedu.in/college.png" alt="College campus connected with MIC">
-            <div>
-              <span>Education</span>
-              <h3>The MIC vision</h3>
-              <p>How religious and modern education can live inside one serious institutional culture.</p>
-            </div>
-          </article>
-          <article class="article-card">
-            <img src="https://www.micedu.in/orphanage.png" alt="MIC institution building">
-            <div>
-              <span>Archive</span>
-              <h3>How to preserve a scholar's papers</h3>
-              <p>Guidelines for scanning letters, book drafts, photos, case records, and oral history.</p>
-            </div>
-          </article>
+        <div class="article-grid" id="articleGrid">
+          <!-- Dynamically rendered by script.js from data/content.js -->
         </div>
       </section>
 
@@ -291,22 +269,7 @@
           <h2>A visual archive with captions, sources, and album structure.</h2>
         </div>
         <div class="gallery-grid">
-          <button class="gallery-item tall" type="button" data-caption="CM Abdulla Moulavi portrait, sourced from MIC public website.">
-            <img src="https://www.micedu.in/cmusthad.png" alt="CM Abdulla Moulavi portrait">
-            <span>Portrait archive</span>
-          </button>
-          <button class="gallery-item" type="button" data-caption="Malabar Islamic Complex campus image for institutional history.">
-            <img src="https://www.micedu.in/college.png" alt="MIC college building">
-            <span>Institution</span>
-          </button>
-          <button class="gallery-item" type="button" data-caption="MIC masjid image for campus and community context.">
-            <img src="https://www.micedu.in/masjid.png" alt="MIC masjid">
-            <span>Campus</span>
-          </button>
-          <button class="gallery-item wide" type="button" data-caption="Darul Irshad Academy image, useful for education legacy albums.">
-            <img src="https://www.micedu.in/daulirshad.jpg" alt="Darul Irshad Academy building">
-            <span>Education legacy</span>
-          </button>
+          <!-- Dynamically rendered by script.js from data/content.js -->
         </div>
       </section>
 
@@ -412,7 +375,10 @@
         <strong>CM Usthad Archive</strong>
         <p>Biography, writings, records, images, and community memory.</p>
       </div>
-      <a href="#top">Back to top</a>
+      <div style="display:flex;gap:16px;align-items:center">
+        <a href="#top">Back to top</a>
+        <a href="admin/index.html" style="opacity:0.5;font-size:0.78rem">Admin</a>
+      </div>
     </footer>
 
     <dialog class="image-dialog" aria-label="Image preview">
