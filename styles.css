@@ -7,16 +7,16 @@
   --font-display: 'Playfair Display', Georgia, serif;
 
   /* Colors */
-  --ink: #0f172a;
-  --muted: #475569;
-  --paper: #f8fafc;
+  --ink: #0b132b;
+  --muted: #415a77;
+  --paper: #f0f3f8;
   --white: #ffffff;
-  --line: #cbd5e1;
-  --slate: #334155;
-  --slate-deep: #1e293b;
+  --line: #d0d7e1;
+  --blue: #233e66;
+  --blue-deep: #121e33;
   --brass: #bf8d43;
   --brass-glow: rgba(191, 141, 67, 0.15);
-  --blue: #2c5269;
+  --blue-accent: #2c5269;
   --maroon: #753b41;
   --shadow: 0 16px 48px rgba(10, 20, 16, 0.06);
   --shadow-lg: 0 24px 60px rgba(10, 20, 16, 0.12);
@@ -48,8 +48,8 @@ body::before {
   pointer-events: none;
   content: "";
   background:
-    linear-gradient(rgba(51, 65, 85, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(51, 65, 85, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(35, 62, 102, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(35, 62, 102, 0.03) 1px, transparent 1px);
   background-size: 42px 42px;
 }
 
@@ -96,7 +96,7 @@ textarea {
   width: 42px;
   height: 42px;
   color: var(--white);
-  background: var(--slate-deep);
+  background: var(--blue-deep);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   place-items: center;
@@ -115,7 +115,7 @@ textarea {
   font-size: 1.15rem;
   font-weight: 700;
   line-height: 1.1;
-  color: var(--slate-deep);
+  color: var(--blue-deep);
 }
 
 .brand small {
@@ -140,8 +140,8 @@ textarea {
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
-  color: var(--slate-deep);
-  background: rgba(51, 65, 85, 0.06);
+  color: var(--blue-deep);
+  background: rgba(35, 62, 102, 0.06);
   outline: 0;
 }
 
@@ -168,8 +168,8 @@ textarea {
 
 .nav-dropdown-toggle:hover,
 .nav-dropdown:hover .nav-dropdown-toggle {
-  color: var(--slate-deep);
-  background: rgba(51, 65, 85, 0.06);
+  color: var(--blue-deep);
+  background: rgba(35, 62, 102, 0.06);
 }
 
 .dropdown-arrow {
@@ -216,8 +216,8 @@ textarea {
 }
 
 .nav-dropdown-menu a:hover {
-  color: var(--slate-deep) !important;
-  background: rgba(51, 65, 85, 0.06) !important;
+  color: var(--blue-deep) !important;
+  background: rgba(35, 62, 102, 0.06) !important;
 }
 
 .nav-toggle {
@@ -419,7 +419,7 @@ textarea {
 }
 
 .button.primary {
-  color: var(--slate-deep);
+  color: var(--blue-deep);
   background: var(--white);
 }
 
@@ -431,7 +431,7 @@ textarea {
 
 .button.secondary {
   color: var(--white);
-  background: var(--slate);
+  background: var(--blue);
 }
 
 .quick-facts {
@@ -473,7 +473,7 @@ textarea {
 .quick-facts strong {
   display: block;
   margin-top: 8px;
-  color: var(--slate-deep);
+  color: var(--blue-deep);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.45rem;
   line-height: 1.15;
@@ -543,7 +543,7 @@ textarea {
 }
 
 .bio-quote-card {
-  background: linear-gradient(135deg, rgba(51, 65, 85, 0.02) 0%, rgba(191, 141, 67, 0.03) 100%);
+  background: linear-gradient(135deg, rgba(35, 62, 102, 0.02) 0%, rgba(191, 141, 67, 0.03) 100%);
   border: 1px dashed var(--brass);
   border-radius: var(--radius);
   padding: 36px;
@@ -565,7 +565,7 @@ textarea {
   font-family: var(--font-display);
   font-size: 1.25rem;
   line-height: 1.5;
-  color: var(--slate-deep);
+  color: var(--blue-deep);
   margin: 0 0 16px;
   position: relative;
   z-index: 1;
@@ -653,7 +653,7 @@ textarea {
 
 .timeline-node.in-view .timeline-marker {
   border-color: var(--brass);
-  background: var(--slate);
+  background: var(--blue);
   box-shadow: 0 0 0 6px var(--brass-glow);
   transform: translate(-50%, -50%) scale(1.2);
 }
@@ -730,7 +730,7 @@ textarea {
   margin-top: 92px;
   padding: 100px max(20px, calc((100vw - 1180px) / 2));
   color: var(--white);
-  background: linear-gradient(135deg, var(--slate-deep) 0%, #334155 50%, #0f172a 100%);
+  background: linear-gradient(135deg, var(--blue-deep) 0%, #233e66 50%, #0b132b 100%);
 }
 
 .section-heading.split {
@@ -836,15 +836,15 @@ textarea {
 }
 
 .filter-button {
-  color: var(--slate-deep);
+  color: var(--blue-deep);
   background: var(--white);
   border-color: var(--line);
 }
 
 .filter-button.active {
   color: var(--white);
-  background: var(--slate);
-  border-color: var(--slate);
+  background: var(--blue);
+  border-color: var(--blue);
 }
 
 .book-grid {
@@ -885,7 +885,7 @@ textarea {
 .sources-section a,
 .site-footer a {
   margin-top: auto;
-  color: var(--slate);
+  color: var(--blue);
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -914,7 +914,7 @@ textarea {
   align-self: start;
   padding: 24px;
   color: var(--white);
-  background: var(--slate-deep);
+  background: var(--blue-deep);
   border-color: transparent;
 }
 
@@ -1101,7 +1101,7 @@ textarea {
 ══════════════════════════════════════ */
 .site-footer {
   color: var(--white);
-  background: var(--slate-deep);
+  background: var(--blue-deep);
   border-top: 1px solid rgba(255, 255, 255, 0.07);
 }
 
@@ -1293,7 +1293,7 @@ textarea {
 }
 
 .footer-admin-link {
-  color: var(--slate-deep);
+  color: var(--blue-deep);
   background: var(--brass);
   border: 1px solid var(--brass);
 }

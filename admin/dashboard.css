@@ -15,10 +15,10 @@
   --border-light:  rgba(255,255,255,0.12);
 
   /* Brand */
-  --slate:         #94a3b8;
-  --slate-dim:     #475569;
-  --slate-deep:    #1e293b;
-  --slate-glow:    rgba(148,163,184,0.12);
+  --blue:          #60a5fa;
+  --blue-dim:      #3b82f6;
+  --blue-deep:     #1d4ed8;
+  --blue-glow:     rgba(96,165,250,0.12);
   --brass:         #d4a055;
   --brass-dim:     rgba(212,160,85,0.15);
 
@@ -76,7 +76,7 @@ a { color: inherit; text-decoration: none; }
   display: grid;
   place-items: center;
   background:
-    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(148,163,184,0.15), transparent),
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(96,165,250,0.15), transparent),
     radial-gradient(ellipse 60% 40% at 90% 110%, rgba(212,160,85,0.1), transparent),
     var(--bg-base);
   padding: 24px;
@@ -102,7 +102,7 @@ a { color: inherit; text-decoration: none; }
 .login-brand .brand-mark {
   width: 52px;
   height: 52px;
-  background: linear-gradient(135deg, var(--slate-deep), var(--slate-dim));
+  background: linear-gradient(135deg, var(--blue-deep), var(--blue-dim));
   border-radius: 14px;
   display: grid;
   place-items: center;
@@ -111,8 +111,8 @@ a { color: inherit; text-decoration: none; }
   font-size: 1rem;
   letter-spacing: 0.5px;
   flex-shrink: 0;
-  border: 1px solid rgba(148,163,184,0.3);
-  box-shadow: 0 0 20px rgba(148,163,184,0.2);
+  border: 1px solid rgba(96,165,250,0.3);
+  box-shadow: 0 0 20px rgba(96,165,250,0.2);
 }
 
 .login-brand h1 {
@@ -153,7 +153,7 @@ a { color: inherit; text-decoration: none; }
   background: var(--bg-elevated);
   padding: 2px 7px;
   border-radius: 5px;
-  color: var(--slate);
+  color: var(--blue);
   font-size: 0.82rem;
 }
 
@@ -193,7 +193,7 @@ a { color: inherit; text-decoration: none; }
 .sidebar-brand .brand-mark {
   width: 38px;
   height: 38px;
-  background: linear-gradient(135deg, var(--slate-deep), var(--slate-dim));
+  background: linear-gradient(135deg, var(--blue-deep), var(--blue-dim));
   border-radius: 10px;
   display: grid;
   place-items: center;
@@ -201,7 +201,7 @@ a { color: inherit; text-decoration: none; }
   font-weight: 700;
   font-size: 0.82rem;
   flex-shrink: 0;
-  border: 1px solid rgba(148,163,184,0.25);
+  border: 1px solid rgba(96,165,250,0.25);
 }
 
 .sidebar-brand strong {
@@ -255,8 +255,8 @@ a { color: inherit; text-decoration: none; }
 }
 
 .nav-item.active {
-  background: var(--slate-glow);
-  color: var(--slate);
+  background: var(--blue-glow);
+  color: var(--blue);
   font-weight: 600;
 }
 
@@ -286,13 +286,13 @@ a { color: inherit; text-decoration: none; }
 }
 
 .view-site-btn {
-  background: var(--slate-glow);
-  color: var(--slate);
-  border: 1px solid rgba(148,163,184,0.2);
+  background: var(--blue-glow);
+  color: var(--blue);
+  border: 1px solid rgba(96,165,250,0.2);
 }
 
 .view-site-btn:hover {
-  background: rgba(148,163,184,0.2);
+  background: rgba(96,165,250,0.2);
 }
 
 .view-site-btn svg, .logout-btn svg {
@@ -403,15 +403,15 @@ a { color: inherit; text-decoration: none; }
 }
 
 .btn-primary {
-  background: var(--slate-dim);
+  background: var(--blue-dim);
   color: #fff;
-  border-color: var(--slate-dim);
+  border-color: var(--blue-dim);
 }
 
 .btn-primary:hover {
-  background: var(--slate);
-  border-color: var(--slate);
-  box-shadow: 0 0 20px rgba(148,163,184,0.3);
+  background: var(--blue);
+  border-color: var(--blue);
+  box-shadow: 0 0 20px rgba(96,165,250,0.3);
 }
 
 .btn-ghost {
@@ -507,7 +507,7 @@ a { color: inherit; text-decoration: none; }
 
 .articles-icon    { background: var(--blue-dim);      color: var(--blue); }
 .images-icon      { background: var(--amber-dim);     color: var(--amber); }
-.books-icon       { background: var(--slate-glow);    color: var(--slate); }
+.books-icon       { background: var(--blue-glow);    color: var(--blue); }
 .news-icon        { background: rgba(139,92,246,.12); color: #a78bfa; }
 .testimonials-icon{ background: rgba(236,72,153,.1);  color: #f472b6; }
 .case-icon        { background: var(--red-dim);       color: var(--red); }
@@ -558,13 +558,13 @@ a { color: inherit; text-decoration: none; }
 .quick-action-btn svg {
   width: 16px;
   height: 16px;
-  color: var(--slate);
+  color: var(--blue);
 }
 
 .quick-action-btn:hover {
-  border-color: var(--slate);
+  border-color: var(--blue);
   color: var(--text-primary);
-  background: var(--slate-glow);
+  background: var(--blue-glow);
 }
 
 /* ══════════════════════════════════════
@@ -625,8 +625,8 @@ a { color: inherit; text-decoration: none; }
   text-transform: uppercase;
   letter-spacing: 0.3px;
   margin-bottom: 8px;
-  background: var(--slate-glow);
-  color: var(--slate);
+  background: var(--blue-glow);
+  color: var(--blue);
 }
 
 .item-card-title {
@@ -851,8 +851,8 @@ a { color: inherit; text-decoration: none; }
 .field input:focus,
 .field select:focus,
 .field textarea:focus {
-  border-color: var(--slate);
-  box-shadow: 0 0 0 3px rgba(148,163,184,0.15);
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(96,165,250,0.15);
 }
 
 .field select option {
@@ -985,9 +985,9 @@ a { color: inherit; text-decoration: none; }
 }
 
 .toast.success {
-  background: rgba(148,163,184,0.15);
-  border-color: rgba(148,163,184,0.3);
-  color: var(--slate);
+  background: rgba(96,165,250,0.15);
+  border-color: rgba(96,165,250,0.3);
+  color: var(--blue);
 }
 
 .toast.error {
@@ -1052,9 +1052,9 @@ a { color: inherit; text-decoration: none; }
 }
 
 .upload-tab.active {
-  background: var(--slate-glow);
-  border-color: rgba(148,163,184,0.3);
-  color: var(--slate);
+  background: var(--blue-glow);
+  border-color: rgba(96,165,250,0.3);
+  color: var(--blue);
 }
 
 .upload-tab:hover:not(.active) {
@@ -1075,13 +1075,13 @@ a { color: inherit; text-decoration: none; }
 
 .file-drop-zone:hover,
 .file-drop-zone.drag-over {
-  border-color: var(--slate);
-  background: var(--slate-glow);
+  border-color: var(--blue);
+  background: var(--blue-glow);
 }
 
 .file-drop-zone.drag-over {
   transform: scale(1.01);
-  box-shadow: 0 0 0 4px rgba(148,163,184,0.15);
+  box-shadow: 0 0 0 4px rgba(96,165,250,0.15);
 }
 
 @media (max-width: 768px) {
