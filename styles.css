@@ -244,7 +244,7 @@ textarea {
   padding: 100px 0;
   overflow: hidden;
   color: var(--white);
-  background: linear-gradient(135deg, #052f28 0%, #0b5043 45%, #153c35 100%);
+  background: linear-gradient(135deg, #0f1a30 0%, #233e66 45%, #1c2b46 100%);
   display: flex;
   align-items: center;
 }
@@ -311,7 +311,7 @@ textarea {
   max-height: 420px;
   object-fit: cover;
   border-radius: 6px;
-  background: linear-gradient(180deg, #053c31 0%, #03251e 100%);
+  background: linear-gradient(180deg, #12223b 0%, #0b1526 100%);
   display: block;
 }
 
@@ -345,7 +345,7 @@ textarea {
   inset: 0;
   background:
     radial-gradient(circle at 16% 36%, rgba(191, 141, 67, 0.15), transparent 30%),
-    linear-gradient(180deg, transparent 60%, rgba(5, 47, 40, 0.3));
+    linear-gradient(180deg, transparent 60%, rgba(18, 30, 51, 0.3));
 }
 
 .hero-content {
@@ -783,7 +783,7 @@ textarea {
   background: rgba(255, 255, 255, 0.08);
   border-color: rgba(191, 141, 67, 0.4);
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(5, 47, 40, 0.3), inset 0 0 20px rgba(191, 141, 67, 0.1);
+  box-shadow: 0 12px 32px rgba(18, 30, 51, 0.3), inset 0 0 20px rgba(191, 141, 67, 0.1);
 }
 
 .knowledge-grid .index {
@@ -894,7 +894,7 @@ textarea {
 .case-section {
   width: 100%;
   padding: 92px max(20px, calc((100vw - 1180px) / 2));
-  background: #edf2ef;
+  background: #eef2f6;
 }
 
 .case-section .section-heading,
@@ -951,7 +951,7 @@ textarea {
   width: 100%;
   aspect-ratio: 1.35;
   object-fit: cover;
-  background: #d8ded8;
+  background: #cbd5e1;
 }
 
 .article-card div {
@@ -1001,7 +1001,7 @@ textarea {
   left: 12px;
   padding: 10px 12px;
   color: var(--white);
-  background: rgba(7, 61, 53, 0.82);
+  background: rgba(18, 30, 51, 0.82);
   border-radius: var(--radius);
   font-size: 0.9rem;
   text-align: left;
@@ -1340,7 +1340,7 @@ textarea {
   height: 34px;
   padding: 0;
   color: var(--white);
-  background: rgba(7, 61, 53, 0.86);
+  background: rgba(18, 30, 51, 0.86);
   border: 0;
   border-radius: 50%;
   cursor: pointer;
