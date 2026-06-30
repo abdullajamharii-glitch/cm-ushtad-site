@@ -277,113 +277,67 @@ textarea {
   z-index: 0;
 }
 
-/* Celestial Portal Layout */
-.celestial-portal {
+/* Professional Archival Portrait Card */
+.portrait-card {
   position: relative;
-  width: 380px;
-  height: 380px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-}
-
-.portal-image-container {
-  width: 310px;
-  height: 310px;
-  border-radius: 50%;
-  overflow: hidden;
-  position: relative;
-  z-index: 5;
-  background: linear-gradient(180deg, #042520 0%, #0d4d40 100%);
-  border: 4px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.celestial-portal .hero-portrait {
-  position: relative;
-  z-index: 1;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
-  border-radius: 50%;
-  transform: scale(1.05);
-  transition: transform 600ms cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.celestial-portal:hover .portal-image-container {
-  transform: scale(1.02);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
-}
-
-.celestial-portal:hover .hero-portrait {
-  transform: scale(1.12);
-}
-
-/* Rotating celestial rings representing astronomy */
-.celestial-ring {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-.ring-outer {
-  width: 370px;
-  height: 370px;
-  border: 1px dashed var(--brass);
-  opacity: 0.6;
-  z-index: 2;
-  animation: rotate-clockwise 40s linear infinite;
-}
-
-.ring-inner {
-  width: 340px;
-  height: 340px;
-  border: 1px double rgba(191, 141, 67, 0.4);
-  z-index: 3;
-  animation: rotate-counter 25s linear infinite;
-}
-
-@keyframes rotate-clockwise {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes rotate-counter {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
-}
-
-/* Floating badge for astronomical portal */
-.portal-badge {
-  position: absolute;
-  bottom: 12px;
-  right: -5px;
+  max-width: 360px;
   background: var(--white);
-  color: var(--green-deep);
-  padding: 8px 14px;
-  border-radius: 999px;
-  font-size: 0.76rem;
-  font-weight: 700;
-  font-family: var(--font-heading);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  z-index: 10;
-  letter-spacing: 0.02em;
-  border: 1px solid var(--brass);
-  animation: float-badge 3s ease-in-out infinite alternate;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: 
+    0 4px 12px rgba(10, 20, 16, 0.04),
+    0 24px 60px rgba(10, 20, 16, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 2;
+  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), border-color 300ms ease, box-shadow 300ms ease;
 }
 
-@keyframes float-badge {
-  from { transform: translateY(0px); }
-  to { transform: translateY(-8px); }
+.portrait-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--brass);
+  box-shadow: 
+    0 10px 20px rgba(10, 20, 16, 0.06),
+    0 35px 80px rgba(10, 20, 16, 0.35);
+}
+
+.portrait-card img.hero-portrait {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 6px;
+  background: linear-gradient(180deg, #053c31 0%, #03251e 100%);
+  display: block;
+}
+
+.portrait-caption {
+  padding: 10px 4px 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--line);
+}
+
+.portrait-caption .caption-title {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.portrait-caption .caption-date {
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--brass);
+  letter-spacing: 0.04em;
 }
 
 .hero-overlay {
@@ -1524,30 +1478,14 @@ textarea {
     order: -1;
   }
 
-  .celestial-portal {
-    width: 300px;
-    height: 300px;
+  .portrait-card {
+    max-width: 290px;
     margin: 0 auto;
+    padding: 10px;
   }
 
-  .portal-image-container {
-    width: 250px;
-    height: 250px;
-  }
-
-  .ring-outer {
-    width: 290px;
-    height: 290px;
-  }
-
-  .ring-inner {
-    width: 270px;
-    height: 270px;
-  }
-
-  .portal-badge {
-    bottom: 5px;
-    right: 15px;
+  .portrait-card img.hero-portrait {
+    max-height: 320px;
   }
 
   .hero-actions {
