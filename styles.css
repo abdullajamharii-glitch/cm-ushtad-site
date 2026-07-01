@@ -299,19 +299,17 @@ textarea {
    - Premium gold-framed card
 ═══════════════════════════════════════════ */
 /* ═══════════════════════════════════════════
-   EDITORIAL ORGANIC PORTRAIT FRAME
-   Inspired by the reference design:
-   - No rigid rectangular frame
-   - Yellow/gold organic blob background shape
-   - Custom floating badges (Chief Qazi, Astronomer)
-   - Circular rotating legacy badge
-   - Micro-interaction pointer decoration
+   CELESTIAL ASTROLABE PORTRAIT DESIGN
+   - Centered inside rotating celestial compass rings
+   - Mihrab Arch style portrait frame
+   - Custom floating coordinate stars
+   - Floating gold/green labels
 ═══════════════════════════════════════════ */
-.editorial-portrait-container {
+.astrolabe-portrait-container {
   position: relative;
   width: 100%;
-  max-width: 400px;
-  height: 460px;
+  max-width: 440px;
+  height: 480px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -319,76 +317,131 @@ textarea {
   margin: 0 auto;
 }
 
-/* Organic background yellow/gold blob */
-.organic-blob-bg {
+/* Axis coordinate lines radiating out */
+.astrolabe-axis-lines {
   position: absolute;
-  top: 40px;
-  left: 20px;
-  width: 320px;
-  height: 320px;
-  background: var(--gold);
-  /* Organic blob shape */
-  border-radius: 30% 70% 40% 60% / 50% 60% 40% 50%;
+  inset: 10px;
+  border-radius: 50%;
   z-index: 1;
-  opacity: 0.95;
-  filter: drop-shadow(0 15px 30px rgba(201, 145, 61, 0.25));
-  animation: morphBlob 12s ease-in-out infinite alternate;
+  pointer-events: none;
 }
 
-@keyframes morphBlob {
-  0% {
-    border-radius: 30% 70% 40% 60% / 50% 60% 40% 50%;
-    transform: rotate(0deg) scale(1);
-  }
-  50% {
-    border-radius: 40% 60% 30% 70% / 40% 50% 60% 50%;
-    transform: rotate(5deg) scale(1.02);
-  }
-  100% {
-    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
-    transform: rotate(-3deg) scale(0.98);
-  }
+.astrolabe-axis-lines::before,
+.astrolabe-axis-lines::after {
+  content: "";
+  position: absolute;
+  background: radial-gradient(circle, rgba(201, 145, 61, 0.25) 0%, transparent 80%);
 }
 
-/* The frame containing the photo - styled organically as well */
-.organic-image-wrap {
-  position: relative;
+/* Horizontal & vertical coordinate lines */
+.astrolabe-axis-lines::before {
+  top: 50%; left: -10%; right: -10%;
+  height: 1px;
+  transform: translateY(-50%);
+}
+
+.astrolabe-axis-lines::after {
+  left: 50%; top: -10%; bottom: -10%;
+  width: 1px;
+  transform: translateX(-50%);
+}
+
+/* Outer rotating astrolabe dial */
+.astrolabe-outer-ring {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border: 1.5px solid rgba(201, 145, 61, 0.4);
+  border-radius: 50%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 25px rgba(201, 145, 61, 0.08), inset 0 0 25px rgba(201, 145, 61, 0.08);
+  pointer-events: none;
+}
+
+.astrolabe-circular-text {
+  width: 100%;
+  height: 100%;
+  animation: spinAstrolabe 35s linear infinite;
+}
+
+@keyframes spinAstrolabe {
+  to { transform: rotate(360deg); }
+}
+
+.astrolabe-circular-text text {
+  font-family: var(--font-heading);
+  font-size: 5.8px;
+  font-weight: 700;
+  fill: var(--gold);
+  letter-spacing: 2.2px;
+  opacity: 0.85;
+}
+
+/* Concentric intermediate rings */
+.astrolabe-ring-mid {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  border: 1px dashed rgba(201, 145, 61, 0.35);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+  animation: spinAstrolabe 50s linear infinite reverse;
+}
+
+.astrolabe-ring-inner {
+  position: absolute;
   width: 290px;
-  height: 380px;
+  height: 290px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+}
+
+/* Islamic Mihrab Arch Portrait Frame */
+.mihrab-portrait-frame {
+  position: relative;
+  width: 260px;
+  height: 360px;
   z-index: 2;
   overflow: hidden;
-  border-radius: 50% 50% 15% 15% / 50% 50% 15% 15%;
-  border: 4px solid var(--white);
+  /* Arch Shape: rounded top, flat/slightly rounded bottom */
+  border-radius: 130px 130px 18px 18px;
+  border: 3.5px solid var(--gold);
   box-shadow: 
-    0 10px 25px rgba(10, 22, 14, 0.15),
-    0 25px 60px rgba(10, 22, 14, 0.25);
+    0 15px 35px rgba(10, 22, 14, 0.3),
+    0 30px 75px rgba(10, 22, 14, 0.4),
+    inset 0 0 30px rgba(0, 0, 0, 0.3);
   background: linear-gradient(180deg, #1b3a2d 0%, #0f2219 100%);
-  transition: transform 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+  transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1), border-color 300ms ease, box-shadow 300ms ease;
 }
 
-.editorial-portrait-container:hover .organic-image-wrap {
-  transform: translateY(-5px);
-  border-color: var(--gold);
+.astrolabe-portrait-container:hover .mihrab-portrait-frame {
+  transform: translateY(-8px) scale(1.02);
+  border-color: #fce6a2;
   box-shadow: 
-    0 15px 35px rgba(10, 22, 14, 0.2),
-    0 35px 80px rgba(10, 22, 14, 0.35);
+    0 20px 45px rgba(201, 145, 61, 0.25),
+    0 40px 90px rgba(10, 22, 14, 0.5);
 }
 
-.organic-pattern-overlay {
+.mihrab-pattern-bg {
   position: absolute;
   inset: 0;
   z-index: 1;
-  opacity: 0.15;
-  background-image: repeating-conic-gradient(
-    from 0deg at 50% 50%,
-    var(--gold) 0deg 10deg,
-    transparent 10deg 45deg
-  );
-  background-size: 50px 50px;
+  opacity: 0.12;
+  background-image: 
+    radial-gradient(circle at 50% 30%, var(--gold) 0%, transparent 60%),
+    repeating-conic-gradient(from 0deg at 50% 50%, var(--gold) 0deg 15deg, transparent 15deg 60deg);
+  background-size: 100% 100%, 40px 40px;
   mix-blend-mode: screen;
 }
 
-.editorial-portrait-container img.hero-portrait {
+.astrolabe-portrait-container img.hero-portrait {
   position: relative;
   z-index: 2;
   width: 100%;
@@ -398,125 +451,79 @@ textarea {
   display: block;
 }
 
-/* Floating Capsule Badges */
-.floating-tag {
+/* Floating Constellation Stars */
+.celestial-star {
+  position: absolute;
+  z-index: 3;
+  color: var(--gold);
+  text-shadow: 0 0 10px var(--gold);
+  pointer-events: none;
+  animation: twinkleStar 3s infinite alternate;
+}
+
+.star-1 {
+  top: 60px; left: 40px;
+  font-size: 1.1rem;
+  animation-delay: 0s;
+}
+
+.star-2 {
+  top: 130px; right: 50px;
+  font-size: 0.9rem;
+  animation-delay: 0.8s;
+}
+
+.star-3 {
+  bottom: 120px; left: 30px;
+  font-size: 0.8rem;
+  animation-delay: 1.5s;
+}
+
+@keyframes twinkleStar {
+  0%   { opacity: 0.3; transform: scale(0.8); }
+  100% { opacity: 1;   transform: scale(1.2); }
+}
+
+/* Astrolabe labels */
+.astrolabe-label {
   position: absolute;
   z-index: 3;
   padding: 8px 16px;
   border-radius: 999px;
   font-family: var(--font-heading);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.02em;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  box-shadow: 0 10px 25px rgba(10, 22, 14, 0.18);
-  transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 300ms ease;
+  box-shadow: 0 10px 25px rgba(10, 22, 14, 0.22);
+  transition: transform 300ms ease, box-shadow 300ms ease;
+  border: 1.5px solid rgba(251, 251, 251, 0.15);
 }
 
-.floating-tag:hover {
-  transform: scale(1.05) translateY(-2px);
-  box-shadow: 0 15px 30px rgba(10, 22, 14, 0.25);
+.astrolabe-label:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(10, 22, 14, 0.3);
 }
 
-/* Primary tag: Chief Qazi */
-.tag-primary {
-  bottom: 40px;
-  left: -20px;
+.label-top {
+  top: 330px;
+  left: -40px;
   background: var(--green);
   color: var(--white);
-  border: 1.5px solid rgba(255, 255, 255, 0.2);
 }
 
-.tag-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background-color: var(--gold);
-  display: inline-block;
-  box-shadow: 0 0 8px var(--gold);
-}
-
-/* Secondary tag: Astronomer */
-.tag-secondary {
-  bottom: 140px;
-  right: -15px;
+.label-bottom {
+  bottom: 25px;
+  right: -30px;
   background: var(--gold);
   color: var(--green-deep);
-  border: 1.5px solid rgba(255, 255, 255, 0.4);
 }
 
-/* Circular Rotating Badge */
-.circular-badge-wrap {
-  position: absolute;
-  top: 30px;
-  right: -30px;
-  z-index: 3;
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  background: var(--green-deep);
-  color: var(--white);
-  border: 2px solid var(--gold);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 25px rgba(10, 22, 14, 0.22);
-  transition: transform 300ms ease;
+.label-icon {
+  font-size: 1rem;
 }
 
-.circular-badge-wrap:hover {
-  transform: scale(1.08) rotate(15deg);
-}
-
-.circular-badge-text {
-  width: 100%;
-  height: 100%;
-  animation: spinText 20s linear infinite;
-}
-
-@keyframes spinText {
-  to { transform: rotate(360deg); }
-}
-
-.circular-badge-text text {
-  font-family: var(--font-heading);
-  font-size: 8.5px;
-  font-weight: 700;
-  fill: var(--gold);
-  letter-spacing: 2px;
-}
-
-.circular-badge-inner {
-  position: absolute;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--green);
-  border: 1px solid rgba(251, 251, 251, 0.15);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--gold);
-}
-
-/* Interactive Cursor Decoration */
-.pointer-cursor-deco {
-  position: absolute;
-  bottom: 25px;
-  left: 145px;
-  z-index: 4;
-  transform: rotate(-15deg);
-  opacity: 0.9;
-  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
-  animation: bounceCursor 3s ease-in-out infinite alternate;
-}
-
-@keyframes bounceCursor {
-  from { transform: rotate(-15deg) translate(0, 0); }
-  to   { transform: rotate(-15deg) translate(4px, 4px); }
-}
 
 .hero-overlay {
   position: absolute;
@@ -1735,53 +1742,43 @@ textarea {
     text-align: center;
   }
 
-  .hero-media {
-    order: -1;
-  }
-
-  .editorial-portrait-container {
+  .astrolabe-portrait-container {
     max-width: 320px;
-    height: 400px;
+    height: 380px;
   }
-  .organic-blob-bg {
+  .astrolabe-outer-ring {
+    width: 300px;
+    height: 300px;
+  }
+  .astrolabe-ring-mid {
     width: 250px;
     height: 250px;
-    left: 25px;
-    top: 30px;
   }
-  .organic-image-wrap {
-    width: 230px;
-    height: 310px;
+  .astrolabe-ring-inner {
+    width: 210px;
+    height: 210px;
   }
-  .floating-tag {
-    font-size: 0.75rem;
+  .mihrab-portrait-frame {
+    width: 190px;
+    height: 260px;
+    border-radius: 95px 95px 12px 12px;
+  }
+  .astrolabe-label {
+    font-size: 0.72rem;
     padding: 6px 12px;
   }
-  .tag-primary {
-    bottom: 25px;
-    left: -10px;
+  .label-top {
+    top: 240px;
+    left: -20px;
   }
-  .tag-secondary {
-    bottom: 110px;
+  .label-bottom {
+    bottom: 10px;
     right: -10px;
   }
-  .circular-badge-wrap {
-    width: 76px;
-    height: 76px;
-    top: 20px;
-    right: -20px;
+  .celestial-star {
+    display: none;
   }
-  .circular-badge-text text {
-    font-size: 9.5px;
-  }
-  .circular-badge-inner {
-    width: 32px;
-    height: 32px;
-  }
-  .pointer-cursor-deco {
-    left: 100px;
-    bottom: 15px;
-  }
+
 
   .hero-actions {
     justify-content: center;
