@@ -309,21 +309,6 @@ textarea {
   z-index: 2;
 }
 
-/* Arabesque SVG ring that sits behind the portrait */
-.portrait-ring-deco {
-  position: absolute;
-  inset: -30px;
-  z-index: 1;
-  pointer-events: none;
-  animation: rotateStar 80s linear infinite;
-  opacity: 0.9;
-}
-
-.portrait-ring-deco svg {
-  width: 100%;
-  height: 100%;
-}
-
 .portrait-float img.hero-portrait {
   position: relative;
   z-index: 2;
