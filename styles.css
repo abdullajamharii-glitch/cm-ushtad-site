@@ -6,34 +6,34 @@
   --font-heading: 'Outfit', sans-serif;
   --font-display: 'Playfair Display', Georgia, serif;
 
-  /* ── Colour System: Scholarly Heritage ──
-     Primary  : Deep Forest Green  #1b3a2d  (ink, headings, hero)
-     Secondary: Warm Gold / Amber  #c9913d  (accent, brass, highlights)
-     Surface  : Ivory / Warm Cream #f7f4ef  (body background)
-     Neutral  : Slate Stone        #5a6a60  (muted text)
+  /* ── Colour System: Celestial Midnight ──
+     Primary  : Midnight Navy      #0f172a  (ink, headings, hero background)
+     Secondary: Warm Copper Gold   #e06d2b  (accent, brass, highlights)
+     Surface  : Ice Alabaster      #f8fafc  (body background)
+     Neutral  : Steel Slate        #475569  (muted text)
   */
-  --ink:        #1a2e23;           /* deep forest green-black  */
-  --muted:      #5a6a60;           /* slate stone              */
-  --paper:      #f7f4ef;           /* warm ivory               */
+  --ink:        #0f172a;           /* deep midnight navy  */
+  --muted:      #475569;           /* steel slate         */
+  --paper:      #f8fafc;           /* ice alabaster       */
   --white:      #ffffff;
-  --line:       #ddd8cf;           /* warm parchment line      */
-  --green:      #1b3a2d;           /* primary dark green       */
-  --green-deep: #0f2219;           /* deeper green for footer  */
-  --green-mid:  #2a5240;           /* mid green                */
-  --green-light:#e8f0eb;           /* tinted green surface     */
-  --gold:       #c9913d;           /* warm amber gold          */
-  --gold-light: #e8b96a;           /* lighter gold highlight   */
-  --gold-glow:  rgba(201,145,61,0.18);
-  --gold-soft:  rgba(201,145,61,0.08);
+  --line:       #e2e8f0;           /* clean slate border  */
+  --green:      #1e293b;           /* primary dark slate  */
+  --green-deep: #0f172a;           /* deep midnight navy  */
+  --green-mid:  #334155;           /* mid slate blue      */
+  --green-light:#f1f5f9;           /* tinted light surface */
+  --gold:       #e06d2b;           /* warm copper gold    */
+  --gold-light: #f49e6a;           /* lighter copper gold */
+  --gold-glow:  rgba(224, 109, 43, 0.18);
+  --gold-soft:  rgba(224, 109, 43, 0.08);
   /* backward-compat aliases used in existing CSS */
   --blue:       var(--green);
   --blue-deep:  var(--green-deep);
   --blue-accent:var(--green-mid);
   --brass:      var(--gold);
   --brass-glow: var(--gold-glow);
-  --maroon:     #7a3b3b;
-  --shadow:     0 16px 48px rgba(10, 22, 14, 0.07);
-  --shadow-lg:  0 24px 60px rgba(10, 22, 14, 0.14);
+  --maroon:     #991b1b;
+  --shadow:     0 16px 48px rgba(15, 23, 42, 0.06);
+  --shadow-lg:  0 24px 60px rgba(15, 23, 42, 0.12);
   --radius: 12px;
   --radius-lg: 16px;
   --content: min(1180px, calc(100vw - 40px));
@@ -62,8 +62,8 @@ body::before {
   pointer-events: none;
   content: "";
   background:
-    linear-gradient(rgba(27, 58, 45, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(27, 58, 45, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
   background-size: 42px 42px;
 }
 
@@ -94,8 +94,8 @@ textarea {
   gap: 24px;
   min-height: 74px;
   padding: 12px max(20px, calc((100vw - 1180px) / 2));
-  background: rgba(247, 244, 239, 0.88);
-  border-bottom: 1px solid rgba(27, 58, 45, 0.08);
+  background: rgba(248, 250, 252, 0.90);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08);
   backdrop-filter: blur(20px);
 }
 
@@ -258,7 +258,7 @@ textarea {
   padding: 100px 0;
   overflow: hidden;
   color: var(--white);
-  background: linear-gradient(140deg, #0a1a10 0%, #1b3a2d 40%, #2a5240 70%, #122818 100%);
+  background: linear-gradient(140deg, #070b19 0%, #0f172a 40%, #1e293b 70%, #0a0d16 100%);
   display: flex;
   align-items: center;
 }
@@ -351,13 +351,13 @@ textarea {
   position: absolute;
   width: 400px;
   height: 400px;
-  border: 1.5px solid rgba(201, 145, 61, 0.4);
+  border: 1.5px solid rgba(224, 109, 43, 0.4);
   border-radius: 50%;
   z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 0 25px rgba(201, 145, 61, 0.08), inset 0 0 25px rgba(201, 145, 61, 0.08);
+  box-shadow: 0 0 25px rgba(224, 109, 43, 0.08), inset 0 0 25px rgba(224, 109, 43, 0.08);
   pointer-events: none;
 }
 
@@ -385,7 +385,7 @@ textarea {
   position: absolute;
   width: 340px;
   height: 340px;
-  border: 1px dashed rgba(201, 145, 61, 0.35);
+  border: 1px dashed rgba(224, 109, 43, 0.35);
   border-radius: 50%;
   z-index: 1;
   pointer-events: none;
@@ -417,7 +417,7 @@ textarea {
     0 15px 35px rgba(10, 22, 14, 0.3),
     0 30px 75px rgba(10, 22, 14, 0.4),
     inset 0 0 30px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(180deg, #1b3a2d 0%, #0f2219 100%);
+  background: linear-gradient(180deg, var(--green) 0%, var(--green-deep) 100%);
   transition: transform 400ms cubic-bezier(0.16, 1, 0.3, 1), border-color 300ms ease, box-shadow 300ms ease;
 }
 
@@ -425,7 +425,7 @@ textarea {
   transform: translateY(-8px) scale(1.02);
   border-color: #fce6a2;
   box-shadow: 
-    0 20px 45px rgba(201, 145, 61, 0.25),
+    0 20px 45px rgba(224, 109, 43, 0.25),
     0 40px 90px rgba(10, 22, 14, 0.5);
 }
 
@@ -529,8 +529,8 @@ textarea {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 18% 38%, rgba(201, 145, 61, 0.18), transparent 32%),
-    radial-gradient(circle at 75% 70%, rgba(42, 82, 64, 0.3), transparent 40%),
+    radial-gradient(circle at 18% 38%, rgba(224, 109, 43, 0.18), transparent 32%),
+    radial-gradient(circle at 75% 70%, rgba(51, 65, 85, 0.3), transparent 40%),
     linear-gradient(180deg, transparent 55%, rgba(10, 25, 14, 0.4));
 }
 
@@ -583,14 +583,14 @@ textarea {
 .orb-1 {
   width: 300px; height: 300px;
   top: -80px; left: 10%;
-  background: radial-gradient(circle, rgba(201,145,61,0.22) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(224,109,43,0.22) 0%, transparent 70%);
   animation-duration: 9s;
 }
 
 .orb-2 {
   width: 220px; height: 220px;
   bottom: 10%; right: 5%;
-  background: radial-gradient(circle, rgba(42,82,64,0.45) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(51,65,85,0.45) 0%, transparent 70%);
   animation-duration: 11s;
   animation-delay: -3s;
 }
@@ -598,7 +598,7 @@ textarea {
 .orb-3 {
   width: 160px; height: 160px;
   top: 40%; left: 35%;
-  background: radial-gradient(circle, rgba(201,145,61,0.15) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(224,109,43,0.15) 0%, transparent 70%);
   animation-duration: 7s;
   animation-delay: -5s;
 }
