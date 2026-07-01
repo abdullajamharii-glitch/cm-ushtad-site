@@ -57,15 +57,47 @@
     <main id="top">
       <section class="hero scroll-reveal" aria-labelledby="hero-title">
         <div class="hero-overlay"></div>
+
+        <!-- Decorative background elements -->
+        <div class="hero-deco" aria-hidden="true">
+          <!-- Large Islamic rosette -->
+          <svg class="hero-deco-star" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="rgba(201,145,61,0.25)" stroke-width="1">
+              <polygon points="100,10 116,60 166,60 126,90 140,140 100,110 60,140 74,90 34,60 84,60"/>
+              <polygon points="100,30 112,68 150,68 120,92 130,130 100,108 70,130 80,92 50,68 88,68" opacity="0.6"/>
+              <circle cx="100" cy="100" r="75" stroke-dasharray="4 8" opacity="0.4"/>
+              <circle cx="100" cy="100" r="55" stroke-dasharray="2 6" opacity="0.3"/>
+              <circle cx="100" cy="100" r="90" opacity="0.15"/>
+            </g>
+          </svg>
+
+          <!-- Small rosette top-right -->
+          <svg class="hero-deco-star-sm" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="rgba(201,145,61,0.2)" stroke-width="1">
+              <polygon points="60,8 72,42 106,42 79,62 90,96 60,76 30,96 41,62 14,42 48,42"/>
+              <circle cx="60" cy="60" r="48" stroke-dasharray="3 6" opacity="0.4"/>
+            </g>
+          </svg>
+
+          <!-- Floating bokeh orbs -->
+          <div class="hero-orb orb-1"></div>
+          <div class="hero-orb orb-2"></div>
+          <div class="hero-orb orb-3"></div>
+          <div class="hero-orb orb-4"></div>
+        </div>
+
         <div class="hero-container">
           <div class="hero-media">
             <div class="hero-glow"></div>
             <div class="portrait-card">
-              <img
-                class="hero-portrait"
-                src="https://www.micedu.in/cmusthad.png"
-                alt="Portrait of CM Abdulla Moulavi"
-              >
+              <div class="portrait-img-wrap">
+                <img
+                  class="hero-portrait"
+                  src="https://www.micedu.in/cmusthad.png"
+                  alt="Portrait of CM Abdulla Moulavi"
+                  onerror="this.src='data/scholar_hero.png'"
+                >
+              </div>
               <div class="portrait-caption">
                 <span class="caption-title">C. M. Abdulla Moulavi</span>
                 <span class="caption-date">1933 — 2010</span>

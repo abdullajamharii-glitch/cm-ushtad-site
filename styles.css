@@ -6,20 +6,34 @@
   --font-heading: 'Outfit', sans-serif;
   --font-display: 'Playfair Display', Georgia, serif;
 
-  /* Colors */
-  --ink: #0b132b;
-  --muted: #415a77;
-  --paper: #f0f3f8;
-  --white: #ffffff;
-  --line: #d0d7e1;
-  --blue: #233e66;
-  --blue-deep: #121e33;
-  --brass: #bf8d43;
-  --brass-glow: rgba(191, 141, 67, 0.15);
-  --blue-accent: #2c5269;
-  --maroon: #753b41;
-  --shadow: 0 16px 48px rgba(10, 20, 16, 0.06);
-  --shadow-lg: 0 24px 60px rgba(10, 20, 16, 0.12);
+  /* ── Colour System: Scholarly Heritage ──
+     Primary  : Deep Forest Green  #1b3a2d  (ink, headings, hero)
+     Secondary: Warm Gold / Amber  #c9913d  (accent, brass, highlights)
+     Surface  : Ivory / Warm Cream #f7f4ef  (body background)
+     Neutral  : Slate Stone        #5a6a60  (muted text)
+  */
+  --ink:        #1a2e23;           /* deep forest green-black  */
+  --muted:      #5a6a60;           /* slate stone              */
+  --paper:      #f7f4ef;           /* warm ivory               */
+  --white:      #ffffff;
+  --line:       #ddd8cf;           /* warm parchment line      */
+  --green:      #1b3a2d;           /* primary dark green       */
+  --green-deep: #0f2219;           /* deeper green for footer  */
+  --green-mid:  #2a5240;           /* mid green                */
+  --green-light:#e8f0eb;           /* tinted green surface     */
+  --gold:       #c9913d;           /* warm amber gold          */
+  --gold-light: #e8b96a;           /* lighter gold highlight   */
+  --gold-glow:  rgba(201,145,61,0.18);
+  --gold-soft:  rgba(201,145,61,0.08);
+  /* backward-compat aliases used in existing CSS */
+  --blue:       var(--green);
+  --blue-deep:  var(--green-deep);
+  --blue-accent:var(--green-mid);
+  --brass:      var(--gold);
+  --brass-glow: var(--gold-glow);
+  --maroon:     #7a3b3b;
+  --shadow:     0 16px 48px rgba(10, 22, 14, 0.07);
+  --shadow-lg:  0 24px 60px rgba(10, 22, 14, 0.14);
   --radius: 12px;
   --radius-lg: 16px;
   --content: min(1180px, calc(100vw - 40px));
@@ -48,8 +62,8 @@ body::before {
   pointer-events: none;
   content: "";
   background:
-    linear-gradient(rgba(35, 62, 102, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(35, 62, 102, 0.03) 1px, transparent 1px);
+    linear-gradient(rgba(27, 58, 45, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27, 58, 45, 0.03) 1px, transparent 1px);
   background-size: 42px 42px;
 }
 
@@ -80,8 +94,8 @@ textarea {
   gap: 24px;
   min-height: 74px;
   padding: 12px max(20px, calc((100vw - 1180px) / 2));
-  background: rgba(252, 253, 250, 0.85);
-  border-bottom: 1px solid rgba(16, 22, 20, 0.05);
+  background: rgba(247, 244, 239, 0.88);
+  border-bottom: 1px solid rgba(27, 58, 45, 0.08);
   backdrop-filter: blur(20px);
 }
 
@@ -244,7 +258,7 @@ textarea {
   padding: 100px 0;
   overflow: hidden;
   color: var(--white);
-  background: linear-gradient(135deg, #0f1a30 0%, #233e66 45%, #1c2b46 100%);
+  background: linear-gradient(140deg, #0a1a10 0%, #1b3a2d 40%, #2a5240 70%, #122818 100%);
   display: flex;
   align-items: center;
 }
@@ -269,83 +283,219 @@ textarea {
 
 .hero-glow {
   position: absolute;
-  width: 320px;
-  height: 320px;
-  background: radial-gradient(circle, var(--brass) 0%, transparent 70%);
-  opacity: 0.15;
-  filter: blur(40px);
+  width: 340px;
+  height: 340px;
+  background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
+  opacity: 0.22;
+  filter: blur(50px);
   z-index: 0;
 }
 
-/* Professional Archival Portrait Card */
+/* ═══════════════════════════════════════════
+   ARTISTIC PORTRAIT FRAME
+   Inspired by editorial magazine style:
+   - Islamic geometric star pattern background
+   - Layered bokeh glow orbs
+   - Premium gold-framed card
+═══════════════════════════════════════════ */
 .portrait-card {
   position: relative;
   width: 100%;
-  max-width: 360px;
-  background: var(--white);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: var(--radius);
-  padding: 14px;
+  max-width: 370px;
+  background: #fff;
+  border: 2px solid rgba(201, 145, 61, 0.35);
+  border-radius: 18px;
+  padding: 0;
   box-shadow: 
-    0 4px 12px rgba(10, 20, 16, 0.04),
-    0 24px 60px rgba(10, 20, 16, 0.25);
+    0 4px 12px rgba(10, 22, 14, 0.04),
+    0 28px 70px rgba(10, 22, 14, 0.30),
+    inset 0 0 0 1px rgba(255,255,255,0.5);
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 0;
   z-index: 2;
-  transition: transform 300ms cubic-bezier(0.16, 1, 0.3, 1), border-color 300ms ease, box-shadow 300ms ease;
+  overflow: hidden;
+  transition: transform 350ms cubic-bezier(0.16, 1, 0.3, 1), border-color 300ms ease, box-shadow 300ms ease;
+}
+
+/* Artistic bokeh + geometric patterned image wrapper */
+.portrait-img-wrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+  background: linear-gradient(150deg, #0f2219 0%, #1b3a2d 50%, #2a5240 100%);
+}
+
+/* Islamic star geometry overlay on image background */
+.portrait-img-wrap::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.18;
+  background-image:
+    /* 8-pointed star lattice using conic-gradient */
+    repeating-conic-gradient(
+      from 0deg at 50% 50%,
+      rgba(201,145,61,0.9) 0deg 5deg,
+      transparent 5deg 45deg
+    );
+  background-size: 48px 48px;
+  mix-blend-mode: screen;
+}
+
+/* Bokeh glow orbs */
+.portrait-img-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(ellipse 60% 40% at 20% 80%, rgba(201,145,61,0.35) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 50% at 80% 20%, rgba(42,82,64,0.6) 0%, transparent 55%),
+    radial-gradient(ellipse 30% 30% at 65% 75%, rgba(201,145,61,0.20) 0%, transparent 50%),
+    radial-gradient(ellipse 25% 25% at 30% 25%, rgba(255,220,140,0.15) 0%, transparent 45%);
+  pointer-events: none;
 }
 
 .portrait-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--brass);
+  transform: translateY(-8px) scale(1.01);
+  border-color: var(--gold);
   box-shadow: 
-    0 10px 20px rgba(10, 20, 16, 0.06),
-    0 35px 80px rgba(10, 20, 16, 0.35);
+    0 12px 24px rgba(10, 22, 14, 0.08),
+    0 40px 90px rgba(10, 22, 14, 0.38),
+    0 0 0 2px var(--gold-glow);
 }
 
 .portrait-card img.hero-portrait {
   position: relative;
+  z-index: 2;
   width: 100%;
   height: auto;
-  max-height: 420px;
+  max-height: 430px;
   object-fit: cover;
-  border-radius: 6px;
-  background: linear-gradient(180deg, #12223b 0%, #0b1526 100%);
+  object-position: center top;
+  border-radius: 0;
   display: block;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.3));
 }
 
 .portrait-caption {
-  padding: 10px 4px 2px;
+  padding: 14px 18px 16px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid var(--line);
+  border-top: 2px solid rgba(201,145,61,0.2);
+  background: linear-gradient(90deg, rgba(27,58,45,0.04) 0%, rgba(201,145,61,0.06) 100%);
 }
 
 .portrait-caption .caption-title {
   font-family: var(--font-heading);
-  font-size: 0.82rem;
+  font-size: 0.80rem;
   font-weight: 700;
   color: var(--ink);
-  letter-spacing: 0.02em;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 
 .portrait-caption .caption-date {
   font-family: var(--font-heading);
-  font-size: 0.82rem;
+  font-size: 0.80rem;
   font-weight: 600;
-  color: var(--brass);
-  letter-spacing: 0.04em;
+  color: var(--gold);
+  letter-spacing: 0.06em;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 16% 36%, rgba(191, 141, 67, 0.15), transparent 30%),
-    linear-gradient(180deg, transparent 60%, rgba(18, 30, 51, 0.3));
+    radial-gradient(circle at 18% 38%, rgba(201, 145, 61, 0.18), transparent 32%),
+    radial-gradient(circle at 75% 70%, rgba(42, 82, 64, 0.3), transparent 40%),
+    linear-gradient(180deg, transparent 55%, rgba(10, 25, 14, 0.4));
+}
+
+/* ═══════════════════════════════════════════════════
+   HERO DECORATIVE BACKGROUND ELEMENTS
+   SVG star rosettes + animated bokeh orbs
+═══════════════════════════════════════════════════ */
+.hero-deco {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* Large Islamic rosette — bottom-left */
+.hero-deco-star {
+  position: absolute;
+  bottom: -80px;
+  left: -60px;
+  width: 420px;
+  height: 420px;
+  opacity: 0.5;
+  animation: rotateStar 60s linear infinite;
+}
+
+/* Small Islamic rosette — top-right */
+.hero-deco-star-sm {
+  position: absolute;
+  top: 30px;
+  right: 60px;
+  width: 180px;
+  height: 180px;
+  opacity: 0.4;
+  animation: rotateStar 40s linear infinite reverse;
+}
+
+@keyframes rotateStar {
+  to { transform: rotate(360deg); }
+}
+
+/* Floating bokeh orbs */
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  animation: floatOrb 8s ease-in-out infinite alternate;
+}
+
+.orb-1 {
+  width: 300px; height: 300px;
+  top: -80px; left: 10%;
+  background: radial-gradient(circle, rgba(201,145,61,0.22) 0%, transparent 70%);
+  animation-duration: 9s;
+}
+
+.orb-2 {
+  width: 220px; height: 220px;
+  bottom: 10%; right: 5%;
+  background: radial-gradient(circle, rgba(42,82,64,0.45) 0%, transparent 70%);
+  animation-duration: 11s;
+  animation-delay: -3s;
+}
+
+.orb-3 {
+  width: 160px; height: 160px;
+  top: 40%; left: 35%;
+  background: radial-gradient(circle, rgba(201,145,61,0.15) 0%, transparent 70%);
+  animation-duration: 7s;
+  animation-delay: -5s;
+}
+
+.orb-4 {
+  width: 100px; height: 100px;
+  top: 20%; right: 30%;
+  background: radial-gradient(circle, rgba(255,220,140,0.18) 0%, transparent 70%);
+  animation-duration: 13s;
+  animation-delay: -1s;
+}
+
+@keyframes floatOrb {
+  from { transform: translateY(0) scale(1); }
+  to   { transform: translateY(-24px) scale(1.08); }
 }
 
 .hero-content {
@@ -730,7 +880,7 @@ textarea {
   margin-top: 92px;
   padding: 100px max(20px, calc((100vw - 1180px) / 2));
   color: var(--white);
-  background: linear-gradient(135deg, var(--blue-deep) 0%, #233e66 50%, #0b132b 100%);
+  background: linear-gradient(135deg, var(--green-deep) 0%, #1b3a2d 50%, #0a1a10 100%);
 }
 
 .section-heading.split {
@@ -843,8 +993,8 @@ textarea {
 
 .filter-button.active {
   color: var(--white);
-  background: var(--blue);
-  border-color: var(--blue);
+  background: var(--green);
+  border-color: var(--green);
 }
 
 .book-grid {
@@ -894,7 +1044,7 @@ textarea {
 .case-section {
   width: 100%;
   padding: 92px max(20px, calc((100vw - 1180px) / 2));
-  background: #eef2f6;
+  background: #eef1ea;
 }
 
 .case-section .section-heading,
@@ -914,7 +1064,7 @@ textarea {
   align-self: start;
   padding: 24px;
   color: var(--white);
-  background: var(--blue-deep);
+  background: var(--green-deep);
   border-color: transparent;
 }
 
@@ -1340,7 +1490,7 @@ textarea {
   height: 34px;
   padding: 0;
   color: var(--white);
-  background: rgba(18, 30, 51, 0.86);
+  background: rgba(10, 25, 14, 0.86);
   border: 0;
   border-radius: 50%;
   cursor: pointer;
@@ -1481,7 +1631,6 @@ textarea {
   .portrait-card {
     max-width: 290px;
     margin: 0 auto;
-    padding: 10px;
   }
 
   .portrait-card img.hero-portrait {
