@@ -89,8 +89,13 @@
         <div class="hero-container">
           <div class="hero-media">
             <div class="hero-glow"></div>
-            <div class="portrait-card">
-              <div class="portrait-img-wrap">
+            <div class="editorial-portrait-container">
+              <!-- Organic background yellow/gold blob -->
+              <div class="organic-blob-bg"></div>
+
+              <!-- Organic Shape Image Frame -->
+              <div class="organic-image-wrap">
+                <div class="organic-pattern-overlay"></div>
                 <img
                   class="hero-portrait"
                   src="https://www.micedu.in/cmusthad.png"
@@ -98,9 +103,35 @@
                   onerror="this.src='data/scholar_hero.png'"
                 >
               </div>
-              <div class="portrait-caption">
-                <span class="caption-title">C. M. Abdulla Moulavi</span>
-                <span class="caption-date">1933 — 2010</span>
+
+              <!-- Floating capsule badges (similar style to the tags in mockup) -->
+              <div class="floating-tag tag-primary">
+                <span class="tag-dot"></span>
+                <span>Chief Qazi & Scholar</span>
+              </div>
+
+              <div class="floating-tag tag-secondary">
+                <span>Astronomer</span>
+              </div>
+
+              <!-- Circular rotating badge "CM USTHAD ARCHIVE" -->
+              <div class="circular-badge-wrap">
+                <svg class="circular-badge-text" viewBox="0 0 100 100">
+                  <path id="badgePath" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="none" />
+                  <text>
+                    <textPath href="#badgePath" startOffset="0%">• CM USTHAD ARCHIVE • LEGACY </textPath>
+                  </text>
+                </svg>
+                <div class="circular-badge-inner">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+              </div>
+
+              <!-- Interactive Pointer Cursor Decoration -->
+              <div class="pointer-cursor-deco">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                  <path d="M3 3l7.07 16.97 2.51-6.73 6.73-2.51L3 3z" fill="var(--green)" stroke="var(--white)" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
               </div>
             </div>
           </div>

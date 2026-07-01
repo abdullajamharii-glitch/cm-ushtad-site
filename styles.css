@@ -298,113 +298,224 @@ textarea {
    - Layered bokeh glow orbs
    - Premium gold-framed card
 ═══════════════════════════════════════════ */
-.portrait-card {
+/* ═══════════════════════════════════════════
+   EDITORIAL ORGANIC PORTRAIT FRAME
+   Inspired by the reference design:
+   - No rigid rectangular frame
+   - Yellow/gold organic blob background shape
+   - Custom floating badges (Chief Qazi, Astronomer)
+   - Circular rotating legacy badge
+   - Micro-interaction pointer decoration
+═══════════════════════════════════════════ */
+.editorial-portrait-container {
   position: relative;
   width: 100%;
-  max-width: 370px;
-  background: #fff;
-  border: 2px solid rgba(201, 145, 61, 0.35);
-  border-radius: 18px;
-  padding: 0;
-  box-shadow: 
-    0 4px 12px rgba(10, 22, 14, 0.04),
-    0 28px 70px rgba(10, 22, 14, 0.30),
-    inset 0 0 0 1px rgba(255,255,255,0.5);
+  max-width: 400px;
+  height: 460px;
   display: flex;
-  flex-direction: column;
-  gap: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+/* Organic background yellow/gold blob */
+.organic-blob-bg {
+  position: absolute;
+  top: 40px;
+  left: 20px;
+  width: 320px;
+  height: 320px;
+  background: var(--gold);
+  /* Organic blob shape */
+  border-radius: 30% 70% 40% 60% / 50% 60% 40% 50%;
+  z-index: 1;
+  opacity: 0.95;
+  filter: drop-shadow(0 15px 30px rgba(201, 145, 61, 0.25));
+  animation: morphBlob 12s ease-in-out infinite alternate;
+}
+
+@keyframes morphBlob {
+  0% {
+    border-radius: 30% 70% 40% 60% / 50% 60% 40% 50%;
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    border-radius: 40% 60% 30% 70% / 40% 50% 60% 50%;
+    transform: rotate(5deg) scale(1.02);
+  }
+  100% {
+    border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
+    transform: rotate(-3deg) scale(0.98);
+  }
+}
+
+/* The frame containing the photo - styled organically as well */
+.organic-image-wrap {
+  position: relative;
+  width: 290px;
+  height: 380px;
   z-index: 2;
   overflow: hidden;
-  transition: transform 350ms cubic-bezier(0.16, 1, 0.3, 1), border-color 300ms ease, box-shadow 300ms ease;
+  border-radius: 50% 50% 15% 15% / 50% 50% 15% 15%;
+  border: 4px solid var(--white);
+  box-shadow: 
+    0 10px 25px rgba(10, 22, 14, 0.15),
+    0 25px 60px rgba(10, 22, 14, 0.25);
+  background: linear-gradient(180deg, #1b3a2d 0%, #0f2219 100%);
+  transition: transform 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
 }
 
-/* Artistic bokeh + geometric patterned image wrapper */
-.portrait-img-wrap {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 16px 16px 0 0;
-  background: linear-gradient(150deg, #0f2219 0%, #1b3a2d 50%, #2a5240 100%);
+.editorial-portrait-container:hover .organic-image-wrap {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+  box-shadow: 
+    0 15px 35px rgba(10, 22, 14, 0.2),
+    0 35px 80px rgba(10, 22, 14, 0.35);
 }
 
-/* Islamic star geometry overlay on image background */
-.portrait-img-wrap::before {
-  content: "";
+.organic-pattern-overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
-  opacity: 0.18;
-  background-image:
-    /* 8-pointed star lattice using conic-gradient */
-    repeating-conic-gradient(
-      from 0deg at 50% 50%,
-      rgba(201,145,61,0.9) 0deg 5deg,
-      transparent 5deg 45deg
-    );
-  background-size: 48px 48px;
+  opacity: 0.15;
+  background-image: repeating-conic-gradient(
+    from 0deg at 50% 50%,
+    var(--gold) 0deg 10deg,
+    transparent 10deg 45deg
+  );
+  background-size: 50px 50px;
   mix-blend-mode: screen;
 }
 
-/* Bokeh glow orbs */
-.portrait-img-wrap::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background:
-    radial-gradient(ellipse 60% 40% at 20% 80%, rgba(201,145,61,0.35) 0%, transparent 60%),
-    radial-gradient(ellipse 40% 50% at 80% 20%, rgba(42,82,64,0.6) 0%, transparent 55%),
-    radial-gradient(ellipse 30% 30% at 65% 75%, rgba(201,145,61,0.20) 0%, transparent 50%),
-    radial-gradient(ellipse 25% 25% at 30% 25%, rgba(255,220,140,0.15) 0%, transparent 45%);
-  pointer-events: none;
-}
-
-.portrait-card:hover {
-  transform: translateY(-8px) scale(1.01);
-  border-color: var(--gold);
-  box-shadow: 
-    0 12px 24px rgba(10, 22, 14, 0.08),
-    0 40px 90px rgba(10, 22, 14, 0.38),
-    0 0 0 2px var(--gold-glow);
-}
-
-.portrait-card img.hero-portrait {
+.editorial-portrait-container img.hero-portrait {
   position: relative;
   z-index: 2;
   width: 100%;
-  height: auto;
-  max-height: 430px;
+  height: 100%;
   object-fit: cover;
   object-position: center top;
-  border-radius: 0;
   display: block;
-  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.3));
 }
 
-.portrait-caption {
-  padding: 14px 18px 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 2px solid rgba(201,145,61,0.2);
-  background: linear-gradient(90deg, rgba(27,58,45,0.04) 0%, rgba(201,145,61,0.06) 100%);
-}
-
-.portrait-caption .caption-title {
+/* Floating Capsule Badges */
+.floating-tag {
+  position: absolute;
+  z-index: 3;
+  padding: 8px 16px;
+  border-radius: 999px;
   font-family: var(--font-heading);
-  font-size: 0.80rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  color: var(--ink);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 10px 25px rgba(10, 22, 14, 0.18);
+  transition: transform 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 300ms ease;
 }
 
-.portrait-caption .caption-date {
+.floating-tag:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 15px 30px rgba(10, 22, 14, 0.25);
+}
+
+/* Primary tag: Chief Qazi */
+.tag-primary {
+  bottom: 40px;
+  left: -20px;
+  background: var(--green);
+  color: var(--white);
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+}
+
+.tag-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--gold);
+  display: inline-block;
+  box-shadow: 0 0 8px var(--gold);
+}
+
+/* Secondary tag: Astronomer */
+.tag-secondary {
+  bottom: 140px;
+  right: -15px;
+  background: var(--gold);
+  color: var(--green-deep);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Circular Rotating Badge */
+.circular-badge-wrap {
+  position: absolute;
+  top: 30px;
+  right: -30px;
+  z-index: 3;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: var(--green-deep);
+  color: var(--white);
+  border: 2px solid var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(10, 22, 14, 0.22);
+  transition: transform 300ms ease;
+}
+
+.circular-badge-wrap:hover {
+  transform: scale(1.08) rotate(15deg);
+}
+
+.circular-badge-text {
+  width: 100%;
+  height: 100%;
+  animation: spinText 20s linear infinite;
+}
+
+@keyframes spinText {
+  to { transform: rotate(360deg); }
+}
+
+.circular-badge-text text {
   font-family: var(--font-heading);
-  font-size: 0.80rem;
-  font-weight: 600;
+  font-size: 8.5px;
+  font-weight: 700;
+  fill: var(--gold);
+  letter-spacing: 2px;
+}
+
+.circular-badge-inner {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--green);
+  border: 1px solid rgba(251, 251, 251, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--gold);
-  letter-spacing: 0.06em;
+}
+
+/* Interactive Cursor Decoration */
+.pointer-cursor-deco {
+  position: absolute;
+  bottom: 25px;
+  left: 145px;
+  z-index: 4;
+  transform: rotate(-15deg);
+  opacity: 0.9;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
+  animation: bounceCursor 3s ease-in-out infinite alternate;
+}
+
+@keyframes bounceCursor {
+  from { transform: rotate(-15deg) translate(0, 0); }
+  to   { transform: rotate(-15deg) translate(4px, 4px); }
 }
 
 .hero-overlay {
@@ -1628,13 +1739,48 @@ textarea {
     order: -1;
   }
 
-  .portrait-card {
-    max-width: 290px;
-    margin: 0 auto;
+  .editorial-portrait-container {
+    max-width: 320px;
+    height: 400px;
   }
-
-  .portrait-card img.hero-portrait {
-    max-height: 320px;
+  .organic-blob-bg {
+    width: 250px;
+    height: 250px;
+    left: 25px;
+    top: 30px;
+  }
+  .organic-image-wrap {
+    width: 230px;
+    height: 310px;
+  }
+  .floating-tag {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+  }
+  .tag-primary {
+    bottom: 25px;
+    left: -10px;
+  }
+  .tag-secondary {
+    bottom: 110px;
+    right: -10px;
+  }
+  .circular-badge-wrap {
+    width: 76px;
+    height: 76px;
+    top: 20px;
+    right: -20px;
+  }
+  .circular-badge-text text {
+    font-size: 9.5px;
+  }
+  .circular-badge-inner {
+    width: 32px;
+    height: 32px;
+  }
+  .pointer-cursor-deco {
+    left: 100px;
+    bottom: 15px;
   }
 
   .hero-actions {
