@@ -83,6 +83,7 @@ const DEFAULT_CONTENT = {
       title: "Magnetic Compass and Its Declination from Standard Directions",
       label: "English",
       category: "astronomy",
+      cover: "book-cover.jpg",
       description: "A practical work on compass variation, true direction, and qibla calculation.",
       linkText: "Add scan or PDF",
       linkHref: "#contribute"
@@ -92,6 +93,7 @@ const DEFAULT_CONTENT = {
       title: "Risala fi istikhraju auqati ssalati wa sumutul qibla",
       label: "Arabic",
       category: "astronomy",
+      cover: "book-cover.jpg",
       description: "A treatise connected to prayer timings and qibla direction through calculation.",
       linkText: "Verify edition",
       linkHref: "#contribute"
@@ -101,6 +103,7 @@ const DEFAULT_CONTENT = {
       title: "Ilmul falak ala dhau'i ilmil hadees",
       label: "Arabic",
       category: "astronomy",
+      cover: "book-cover.jpg",
       description: "An introductory astronomy work connecting classical learning and modern science.",
       linkText: "Add bibliography",
       linkHref: "#contribute"
@@ -110,6 +113,7 @@ const DEFAULT_CONTENT = {
       title: "Fiqh Articles and Community Notes",
       label: "Archive",
       category: "fiqh",
+      cover: "book-cover.jpg",
       description: "A future collection for legal notes, qazi records, and verified scholarly responses.",
       linkText: "Submit document",
       linkHref: "#contribute"
@@ -119,6 +123,7 @@ const DEFAULT_CONTENT = {
       title: "Arabic and Urdu Translation Notes",
       label: "Translation",
       category: "translation",
+      cover: "book-cover.jpg",
       description: "Space for preserving translations, poem drafts, and multilingual manuscript records.",
       linkText: "Add manuscript",
       linkHref: "#contribute"
@@ -128,6 +133,7 @@ const DEFAULT_CONTENT = {
       title: "Tazweedul Fikri Wal Himam",
       label: "Mathematics",
       category: "astronomy",
+      cover: "book-cover.jpg",
       description: "A mathematics-focused text introducing ratios and logarithms for students.",
       linkText: "Confirm title",
       linkHref: "#contribute"

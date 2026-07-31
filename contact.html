@@ -169,36 +169,95 @@
 
     <main>
 <section class="section contribute-section" id="contribute">
-        <div id="contact">
+        <!-- Left Side: Info & Channels -->
+        <div class="contribute-info" id="contact">
           <p class="eyebrow">Contact &amp; Contribution desk</p>
           <h2>Build the archive with real material.</h2>
-          <p>
-            Add verified photos, book scans, handwritten notes, video links, news clippings,
-            corrections, and signed memories. This first version is ready to receive them.
+          <p class="contribute-desc">
+            Help preserve the documented legacy of CM Usthad. Submit photographs, manuscripts, official court filings, video recordings, or oral testimonies. Every piece is verified by the archive editorial committee.
           </p>
+
+          <div class="contribute-channels">
+            <div class="channel-card">
+              <div class="channel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div class="channel-details">
+                <strong>Archive Desk Email</strong>
+                <a href="mailto:archive@cmusthad.org">archive@cmusthad.org</a>
+              </div>
+            </div>
+
+            <div class="channel-card">
+              <div class="channel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="channel-details">
+                <strong>Institutional Office</strong>
+                <span>Malabar Islamic Complex, Chattanchal, Kasaragod, Kerala</span>
+              </div>
+            </div>
+
+            <div class="channel-card">
+              <div class="channel-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <div class="channel-details">
+                <strong>Verification Standards</strong>
+                <span>Submissions are catalogued with source origin, date stamps, and archival integrity checks.</span>
+              </div>
+            </div>
+          </div>
         </div>
-        <form class="contribute-form" id="submission">
-          <label>
-            Name
-            <input type="text" placeholder="Your name">
-          </label>
-          <label>
-            Material type
-            <select>
-              <option>Photo</option>
-              <option>Book scan</option>
-              <option>Article</option>
-              <option>Case document</option>
-              <option>Testimonial</option>
-              <option>Correction</option>
-            </select>
-          </label>
-          <label>
-            Note
-            <textarea rows="4" placeholder="Describe the material and its source"></textarea>
-          </label>
-          <button class="button primary" type="button">Prepare submission</button>
-        </form>
+
+        <!-- Right Side: Form -->
+        <div class="contribute-form-wrap">
+          <form class="contribute-form" id="submission">
+            <div class="form-header">
+              <h3>Submit Materials</h3>
+              <p>Fill out details below to submit or suggest archival content.</p>
+            </div>
+
+            <div class="form-row-2">
+              <label>
+                Full Name *
+                <input type="text" placeholder="e.g. Abdullah Khan" required>
+              </label>
+
+              <label>
+                Contact / Email *
+                <input type="text" placeholder="Phone or email" required>
+              </label>
+            </div>
+
+            <label>
+              Material Category *
+              <select>
+                <option>Photograph / Visual Record</option>
+                <option>Book Scan / Manuscript</option>
+                <option>Court Order / Case Document</option>
+                <option>Recorded Speech / Audio</option>
+                <option>Personal Testimonial / Story</option>
+                <option>Archival Correction / Note</option>
+              </select>
+            </label>
+
+            <label>
+              File URL / Drive Link (Optional)
+              <input type="url" placeholder="https://drive.google.com/file/... or link">
+            </label>
+
+            <label>
+              Description &amp; Source Context *
+              <textarea rows="4" placeholder="Describe the material, approximate year, location, and where it was sourced..." required></textarea>
+            </label>
+
+            <button class="contribute-submit-btn" type="submit">
+              <span>Submit to Archive Desk</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </form>
+        </div>
       </section>
     </main>
 
