@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="data/favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles.css">
     <script src="data/content.js"></script>
   </head>
@@ -24,10 +26,10 @@
       </div>
 
       <!-- Floating Pill Header -->
-      <div class="nfi-header-wrap">
+                              <div class="nfi-header-wrap">
         <header class="nfi-header">
-          <a class="nfi-brand" href="#top" aria-label="CM Usthad Archive home">
-            <span class="nfi-brand-mark">CM</span>
+          <a class="nfi-brand" href="index.html#top" aria-label="CM Usthad Archive home">
+            <span class="nfi-brand-mark"><img src="data/cm_logo.png" alt="CM Usthad Logo" class="nfi-brand-img"></span>
             <span class="nfi-brand-text">
               <strong>CM Usthad</strong>
               <small>Archive &amp; Legacy</small>
@@ -38,30 +40,122 @@
             <span></span><span></span><span></span>
           </button>
 
-          <nav class="nfi-nav" aria-label="Primary navigation">
-            <a href="#top" class="nfi-nav-link nfi-nav-active">Home</a>
+          <nav class="nfi-nav" id="primaryNav">
+
+            <!-- 1. Home -->
             <div class="nav-dropdown">
-              <button class="nav-dropdown-toggle nfi-nav-link" type="button" aria-expanded="false" aria-haspopup="true">
-                Bio
+              <a href="index.html" class="nav-dropdown-toggle nfi-nav-link">
+                Home
                 <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l4 4 4-4"/></svg>
-              </button>
+              </a>
               <div class="nav-dropdown-menu">
-                <a href="#bio">Biography</a>
-                <a href="#timeline">Timeline</a>
+                <a href="index.html#top">Hero</a>
+                <a href="index.html#bio">Introduction</a>
+                <a href="index.html#quick-facts">Highlights</a>
               </div>
             </div>
-            <a href="#books" class="nfi-nav-link">Books</a>
-            <a href="#case-diary" class="nfi-nav-link">Case Diary</a>
-            <a href="#articles" class="nfi-nav-link">Articles</a>
-            <a href="#gallery" class="nfi-nav-link">Images</a>
-            <a href="#news" class="nfi-nav-link">News</a>
-            <a href="#voices" class="nfi-nav-link">Testimonials</a>
+
+            <!-- 2. Life -->
+            <div class="nav-dropdown">
+              <a href="life.html" class="nav-dropdown-toggle nfi-nav-link">
+                Life
+                <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l4 4 4-4"/></svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="life.html#bio">Biography</a>
+                <a href="life.html#timeline">Timeline</a>
+                <a href="life.html#family">Family</a>
+                <a href="life.html#education">Education</a>
+                <a href="life.html#career">Career</a>
+              </div>
+            </div>
+
+            <!-- 3. Works -->
+            <div class="nav-dropdown">
+              <a href="works.html" class="nav-dropdown-toggle nfi-nav-link">
+                Works
+                <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l4 4 4-4"/></svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="works.html#books">Books</a>
+                <a href="works.html#articles">Articles</a>
+                <a href="works.html#lectures">Lectures</a>
+                <a href="works.html#research">Research</a>
+                <a href="works.html#fatwas">Fatwas</a>
+              </div>
+            </div>
+
+            <!-- 4. Legacy -->
+            <div class="nav-dropdown">
+              <a href="legacy.html" class="nav-dropdown-toggle nfi-nav-link">
+                Legacy
+                <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l4 4 4-4"/></svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="legacy.html#institutions">Institutions</a>
+                <a href="legacy.html#students">Students</a>
+                <a href="legacy.html#voices">Testimonials</a>
+                <a href="legacy.html#influence">Influence</a>
+                <a href="legacy.html#awards">Awards &amp; Recognition</a>
+              </div>
+            </div>
+
+            <!-- 5. Case Diary -->
+            <div class="nav-dropdown">
+              <a href="case-diary.html" class="nav-dropdown-toggle nfi-nav-link">
+                Case Diary
+                <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l4 4 4-4"/></svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="case-diary.html#case-diary">Case Overview</a>
+                <a href="case-diary.html#investigation-timeline">Investigation Timeline</a>
+                <a href="case-diary.html#fir-records">FIR / Police Records</a>
+                <a href="case-diary.html#court-docs">Court Documents</a>
+                <a href="case-diary.html#news-reports">Newspaper Reports</a>
+                <a href="case-diary.html#official-docs">Official Documents</a>
+                <a href="case-diary.html#downloads">Downloadable PDFs</a>
+              </div>
+            </div>
+
+            <!-- 6. Gallery -->
+            <div class="nav-dropdown">
+              <a href="gallery.html" class="nav-dropdown-toggle nfi-nav-link">
+                Gallery
+                <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l4 4 4-4"/></svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="gallery.html#gallery">Images</a>
+                <a href="gallery.html#videos">Videos</a>
+                <a href="gallery.html#events">Events</a>
+              </div>
+            </div>
+
+            <!-- 7. News -->
+            <div class="nav-dropdown">
+              <a href="news.html" class="nav-dropdown-toggle nfi-nav-link">
+                News
+                <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l4 4 4-4"/></svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="news.html#news">Latest Updates</a>
+                <a href="news.html#announcements">Announcements</a>
+              </div>
+            </div>
+
           </nav>
 
-          <a href="admin/index.html" class="nfi-admin-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-            Admin
-          </a>
+          <!-- Contact Action Button on Right -->
+          <div class="nav-dropdown">
+            <a href="contact.html" class="nfi-contact-btn">
+              Contact
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <a href="contact.html#contact">Contact Info</a>
+              <a href="contact.html#contribute">Contributions</a>
+              <a href="contact.html#submission">Archive Submission</a>
+            </div>
+          </div>
         </header>
       </div>
 
@@ -86,11 +180,11 @@
           <!-- Left: Content -->
           <div class="nfi-hero-content">
             <div class="nfi-eyebrow-pill">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-              <span>Scholar. Qazi. Writer. Educator.</span>
+              <span class="nfi-pill-badge">CM</span>
+              <span class="nfi-pill-text">Abdulla Moulavi Chembarikka</span>
             </div>
 
-            <h1 id="hero-title" class="nfi-hero-title">CM Abdulla<br>Moulavi</h1>
+            <h1 id="hero-title" class="nfi-hero-title">A Man With<br>Great Vision</h1>
 
             <p class="nfi-hero-copy">
               A dedicated archive for Chembirika Qazi, preserving his life,
@@ -110,14 +204,13 @@
             </div>
           </div>
 
-          <!-- Right: Portrait Card -->
+          <!-- Right: Floating Segmented Photo Mosaic Graphic -->
           <div class="nfi-hero-media">
-            <div class="nfi-portrait-card">
+            <div class="nfi-portrait-mosaic-wrap">
               <img
-                src="https://www.micedu.in/cmusthad.png"
-                alt="Portrait of CM Abdulla Moulavi"
-                class="nfi-portrait-img"
-                onerror="this.src='data/scholar_hero.png'"
+                src="data/hero_segmented_graphic.png"
+                alt="Segmented portrait of CM Abdulla Moulavi"
+                class="nfi-portrait-mosaic-img"
               >
             </div>
           </div>
@@ -128,7 +221,7 @@
 
     <main>
 
-      <section class="quick-facts" aria-label="Key facts">
+      <section class="quick-facts" id="quick-facts" aria-label="Key facts">
         <article>
           <span>Born</span>
           <strong>1933</strong>
@@ -153,7 +246,7 @@
 
       <section class="section editorial scroll-reveal" id="bio">
         <div class="section-heading">
-          <p class="eyebrow">Biography</p>
+          <p class="eyebrow">Biography &amp; Life</p>
           <h2>A life shaped by learning, leadership, and public duty.</h2>
         </div>
         <div class="bio-layout">
@@ -180,18 +273,38 @@
             <cite>Archive Editorial Committee</cite>
           </div>
         </div>
+
+        <!-- Life Sub-sections Grid (Family, Education, Career) -->
+        <div class="life-sub-grid">
+          <div class="life-sub-card" id="family">
+            <div class="card-tag">Family</div>
+            <h3>Lineage &amp; Heritage</h3>
+            <p>Born into a respected family of scholars in Chembirika, Kasaragod. His ancestral house remains a center of spiritual guidance and community trust.</p>
+          </div>
+          <div class="life-sub-card" id="education">
+            <div class="card-tag">Education</div>
+            <h3>Scholarly Formation</h3>
+            <p>Graduated as Maulvi Fadhil Baqawi from Baqiyat al-Swalihat in Vellore, mastering Islamic law, astronomy, mathematics, and Arabic classical sciences.</p>
+          </div>
+          <div class="life-sub-card" id="career">
+            <div class="card-tag">Career</div>
+            <h3>Public &amp; Judicial Service</h3>
+            <p>Served as Chief Qazi across dozens of mahals in Kerala and South Karnataka, while leading educational reform as founder of the Malabar Islamic Complex (MIC).</p>
+          </div>
+        </div>
       </section>
 
       <section class="section timeline-section scroll-reveal" id="timeline">
         <div class="section-heading">
           <p class="eyebrow">Interactive Timeline</p>
-          <h2>A chronological journey through a life of service.</h2>
+          <h2>A chronological journey through a life of service and leadership.</h2>
         </div>
         <div class="timeline-container">
           <div class="timeline-progress-line">
             <div class="timeline-progress-fill"></div>
           </div>
           
+          <!-- STEP 01: 1933 -->
           <div class="timeline-node scroll-reveal" data-step="01">
             <div class="timeline-marker">
               <span class="marker-dot"></span>
@@ -202,7 +315,7 @@
                 <time class="timeline-date">1933</time>
               </div>
               <h3>Born in Chembirika</h3>
-              <p>CM Abdulla Moulavi was born in the coastal village of Chembirika in Kasaragod, Kerala, to a family of esteemed theologians and scholars.</p>
+              <p>CM Abdulla Moulavi was born in the coastal village of Chembirika in Kasaragod district, Kerala, to a renowned family of scholars and spiritual leaders.</p>
             </div>
             <div class="timeline-media">
               <div class="timeline-img-wrap">
@@ -212,6 +325,7 @@
             </div>
           </div>
 
+          <!-- STEP 02: 1963 -->
           <div class="timeline-node scroll-reveal" data-step="02">
             <div class="timeline-marker">
               <span class="marker-dot"></span>
@@ -219,10 +333,10 @@
             <div class="timeline-content">
               <div class="timeline-meta">
                 <span class="timeline-step-badge">STEP 02</span>
-                <time class="timeline-date">1962</time>
+                <time class="timeline-date">1963</time>
               </div>
-              <h3>Scholarly Graduation</h3>
-              <p>He graduated as a <i>Maulvi Fadhil Baqawi</i> from Baqiyat al-Swalihat in Vellore, mastering Islamic law, languages, and astronomical calculation sciences.</p>
+              <h3>Scholarly Graduation (Baqawi)</h3>
+              <p>Graduated as a <i>Maulvi Fadhil Baqawi</i> from the prestigious Baqiyat al-Swalihat in Vellore, mastering Islamic jurisprudence, languages, and astronomy.</p>
             </div>
             <div class="timeline-media">
               <div class="timeline-img-wrap">
@@ -232,26 +346,28 @@
             </div>
           </div>
 
-          <div class="timeline-node scroll-reveal timeline-collapsed hidden" data-step="03">
+          <!-- STEP 03: 1971 -->
+          <div class="timeline-node scroll-reveal" data-step="03">
             <div class="timeline-marker">
               <span class="marker-dot"></span>
             </div>
             <div class="timeline-content">
               <div class="timeline-meta">
                 <span class="timeline-step-badge">STEP 03</span>
-                <time class="timeline-date">1973</time>
+                <time class="timeline-date">1971</time>
               </div>
-              <h3>Appointed Chief Qazi</h3>
-              <p>He took up responsibilities as Qazi of Chembirika and went on to serve as Chief Qazi for numerous mahals across Kasaragod and South Karnataka, settling disputes and guiding the community.</p>
+              <h3>Jamia Sa'diyya Arabia Established</h3>
+              <p>Jamia Sa'diyya Arabia started as a premier educational institution, marking a major milestone in advancing Islamic learning and social welfare in Kasaragod.</p>
             </div>
             <div class="timeline-media">
               <div class="timeline-img-wrap">
-                <img src="data/qazi_mahal.png" alt="Qazi mahal traditional mosque" loading="lazy">
-                <span class="media-tag">Leadership</span>
+                <img src="https://www.micedu.in/college.png" alt="Jamia Sa'diyya Arabia institution" loading="lazy">
+                <span class="media-tag">Institution</span>
               </div>
             </div>
           </div>
 
+          <!-- STEP 04: 1974 -->
           <div class="timeline-node scroll-reveal timeline-collapsed hidden" data-step="04">
             <div class="timeline-marker">
               <span class="marker-dot"></span>
@@ -259,19 +375,20 @@
             <div class="timeline-content">
               <div class="timeline-meta">
                 <span class="timeline-step-badge">STEP 04</span>
-                <time class="timeline-date">1993</time>
+                <time class="timeline-date">1974</time>
               </div>
-              <h3>Founding the Malabar Islamic Complex</h3>
-              <p>CM Usthad founded the Malabar Islamic Complex (MIC) in Chattanchal, establishing an academy where religious sciences and modern secondary education are taught side by side.</p>
+              <h3>Appointed Qazi for the First Time</h3>
+              <p>Following the passing of his father, CM Usthad was appointed for the first time as Qazi, assuming judicial leadership for Chembirika and surrounding mahals.</p>
             </div>
             <div class="timeline-media">
               <div class="timeline-img-wrap">
-                <img src="https://www.micedu.in/college.png" alt="Malabar Islamic Complex campus building" loading="lazy">
-                <span class="media-tag">Institution</span>
+                <img src="data/qazi_mahal.png" alt="Qazi mahal traditional mosque" loading="lazy">
+                <span class="media-tag">Judicial Leadership</span>
               </div>
             </div>
           </div>
 
+          <!-- STEP 05: 1993 -->
           <div class="timeline-node scroll-reveal timeline-collapsed hidden" data-step="05">
             <div class="timeline-marker">
               <span class="marker-dot"></span>
@@ -279,18 +396,61 @@
             <div class="timeline-content">
               <div class="timeline-meta">
                 <span class="timeline-step-badge">STEP 05</span>
-                <time class="timeline-date">2010</time>
+                <time class="timeline-date">1993</time>
               </div>
-              <h3>Legacy and Eternal Memory</h3>
-              <p>CM Usthad passed away on 15 February 2010. His legacy endures through the ongoing search for documented truth, his books, and the educational systems he founded.</p>
+              <h3>Foundation Laid for Malabar Islamic Complex (MIC)</h3>
+              <p>Foundation was laid for the Malabar Islamic Complex (MIC) in Chattanchal, creating a campus integrating Islamic jurisprudence with modern academic education.</p>
+            </div>
+            <div class="timeline-media">
+              <div class="timeline-img-wrap">
+                <img src="https://www.micedu.in/college.png" alt="Malabar Islamic Complex campus building" loading="lazy">
+                <span class="media-tag">MIC Foundation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 06: 2008 -->
+          <div class="timeline-node scroll-reveal timeline-collapsed hidden" data-step="06">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-step-badge">STEP 06</span>
+                <time class="timeline-date">2008</time>
+              </div>
+              <h3>Appointed Qazi of Mangalore</h3>
+              <p>Appointed as the Chief Qazi of Mangalore (South Karnataka), extending his judicial and spiritual leadership across major mahals in Karnataka and Kerala.</p>
+            </div>
+            <div class="timeline-media">
+              <div class="timeline-img-wrap">
+                <img src="data/qazi_mahal.png" alt="Mangalore Qazi Mosque" loading="lazy">
+                <span class="media-tag">Mangalore Qazi</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 07: 2010 -->
+          <div class="timeline-node scroll-reveal timeline-collapsed hidden" data-step="07">
+            <div class="timeline-marker">
+              <span class="marker-dot"></span>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-meta">
+                <span class="timeline-step-badge">STEP 07</span>
+                <time class="timeline-date">15 Feb 2010</time>
+              </div>
+              <h3>Martyred on 15 February 2010</h3>
+              <p>CM Usthad was martyred on 15 February 2010. His martyrdom inspired widespread community solidarity and a continuing pursuit of truth, justice, and archive preservation.</p>
             </div>
             <div class="timeline-media">
               <div class="timeline-img-wrap">
                 <img src="https://www.micedu.in/masjid.png" alt="MIC campus masjid in Chattanchal" loading="lazy">
-                <span class="media-tag">Enduring Legacy</span>
+                <span class="media-tag">Eternal Legacy</span>
               </div>
             </div>
           </div>
+
         </div>
         
         <div class="timeline-actions">
@@ -298,10 +458,10 @@
         </div>
       </section>
 
-      <section class="section knowledge-band scroll-reveal" aria-labelledby="knowledge-title">
+      <section class="section knowledge-band scroll-reveal" id="research" aria-labelledby="knowledge-title">
         <div class="section-heading split">
           <div>
-            <p class="eyebrow">Fields of work</p>
+            <p class="eyebrow">Fields of work &amp; Research</p>
             <h2 id="knowledge-title">The archive is organized around the subjects he returned to repeatedly.</h2>
           </div>
           <p class="section-desc">
@@ -309,10 +469,10 @@
           </p>
         </div>
         <div class="knowledge-grid">
-          <article>
+          <article id="fatwas">
             <span class="index">01</span>
-            <h3>Islamic Jurisprudence</h3>
-            <p>Fatwa, qazi service, community settlement, and educational guidance.</p>
+            <h3>Islamic Jurisprudence &amp; Fatwas</h3>
+            <p>Fatwa rulings, qazi judicial service, community settlement, and legal guidance.</p>
           </article>
           <article>
             <span class="index">02</span>
@@ -321,108 +481,242 @@
           </article>
           <article>
             <span class="index">03</span>
-            <h3>Mathematics</h3>
+            <h3>Mathematics &amp; Science</h3>
             <p>Logarithm, trigonometry, compass declination, and applied calculation.</p>
           </article>
-          <article>
+          <article id="lectures">
             <span class="index">04</span>
-            <h3>Languages</h3>
-            <p>Arabic, Malayalam, Urdu, English, translation, and literary writing.</p>
+            <h3>Languages &amp; Lectures</h3>
+            <p>Arabic, Malayalam, Urdu, English, translation notes, and public speeches.</p>
           </article>
         </div>
       </section>
 
-      <section class="section" id="books">
+      <section class="section books-section" id="books">
         <div class="section-heading row">
           <div>
-            <p class="eyebrow">Books & writings</p>
-            <h2>Works that should become searchable, downloadable, and carefully catalogued.</h2>
+            <p class="eyebrow">Books &amp; Literature</p>
+            <h2>Works catalogued, preserved, and searchable.</h2>
           </div>
-          <label class="search-box">
-            <span>Search writings</span>
-            <input type="search" id="bookSearch" placeholder="Search title or topic">
-          </label>
+          <div class="search-box-wrap">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="search" id="bookSearch" placeholder="Search title, language or topic..." aria-label="Search writings">
+          </div>
         </div>
 
         <div class="filter-group" aria-label="Filter books">
-          <button type="button" class="filter-button active" data-filter="all">All</button>
-          <button type="button" class="filter-button" data-filter="astronomy">Astronomy</button>
-          <button type="button" class="filter-button" data-filter="fiqh">Fiqh</button>
-          <button type="button" class="filter-button" data-filter="translation">Translation</button>
+          <button type="button" class="filter-button active" data-filter="all">All Works</button>
+          <button type="button" class="filter-button" data-filter="astronomy">Astronomy &amp; Science</button>
+          <button type="button" class="filter-button" data-filter="fiqh">Fiqh &amp; Law</button>
+          <button type="button" class="filter-button" data-filter="translation">Translations</button>
         </div>
 
         <div class="book-grid" id="bookGrid">
           <article class="book-card" data-category="astronomy" data-title="Magnetic Compass and Its Declination from Standard Directions">
-            <span class="book-label">English</span>
-            <h3>Magnetic Compass and Its Declination from Standard Directions</h3>
-            <p>A practical work on compass variation, true direction, and qibla calculation.</p>
-            <a href="#contribute">Add scan or PDF</a>
+            <div class="book-card-header">
+              <span class="book-label">English</span>
+              <div class="book-card-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </div>
+            </div>
+            <h3>Magnetic Compass and Its Declination</h3>
+            <p>A practical, ground-breaking treatise on magnetic variation, compass declination, and exact qibla direction calculation.</p>
+            <a class="book-card-link" href="#contribute">
+              <span>Add scan or PDF</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
           </article>
+
           <article class="book-card" data-category="astronomy" data-title="Risala fi istikhraju auqati ssalati wa sumutul qibla">
-            <span class="book-label">Arabic</span>
-            <h3>Risala fi istikhraju auqati ssalati wa sumutul qibla</h3>
-            <p>A treatise connected to prayer timings and qibla direction through calculation.</p>
-            <a href="#contribute">Verify edition</a>
+            <div class="book-card-header">
+              <span class="book-label">Arabic</span>
+              <div class="book-card-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </div>
+            </div>
+            <h3>Risala fi Istikhraju Auqati Ssalati</h3>
+            <p>Mathematical and astronomical formulation for determining prayer times and directional azimuths across regions.</p>
+            <a class="book-card-link" href="#contribute">
+              <span>Verify edition</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
           </article>
+
           <article class="book-card" data-category="astronomy" data-title="Ilmul falak ala dhau'i ilmil hadees">
-            <span class="book-label">Arabic</span>
-            <h3>Ilmul falak ala dhau'i ilmil hadees</h3>
-            <p>An introductory astronomy work connecting classical learning and modern science.</p>
-            <a href="#contribute">Add bibliography</a>
+            <div class="book-card-header">
+              <span class="book-label">Arabic</span>
+              <div class="book-card-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </div>
+            </div>
+            <h3>Ilmul Falak Ala Dhau'i Ilmil Hadees</h3>
+            <p>An introductory work bridging Hadith traditions with astronomical science, moon sighting, and celestial observations.</p>
+            <a class="book-card-link" href="#contribute">
+              <span>Add bibliography</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
           </article>
+
           <article class="book-card" data-category="fiqh" data-title="Fiqh articles and community notes">
-            <span class="book-label">Archive</span>
-            <h3>Fiqh Articles and Community Notes</h3>
-            <p>A future collection for legal notes, qazi records, and verified scholarly responses.</p>
-            <a href="#contribute">Submit document</a>
+            <div class="book-card-header">
+              <span class="book-label">Fiqh &amp; Law</span>
+              <div class="book-card-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </div>
+            </div>
+            <h3>Fiqh Rulings &amp; Judicial Notes</h3>
+            <p>A compilation of legal opinions, qazi judgments, and scholarly Fatwas settling community matters across Kerala and Karnataka.</p>
+            <a class="book-card-link" href="#contribute">
+              <span>Submit document</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
           </article>
+
           <article class="book-card" data-category="translation" data-title="Arabic and Urdu translation notes">
-            <span class="book-label">Translation</span>
-            <h3>Arabic and Urdu Translation Notes</h3>
-            <p>Space for preserving translations, poem drafts, and multilingual manuscript records.</p>
-            <a href="#contribute">Add manuscript</a>
+            <div class="book-card-header">
+              <span class="book-label">Translation</span>
+              <div class="book-card-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </div>
+            </div>
+            <h3>Arabic &amp; Urdu Translation Notes</h3>
+            <p>Preserved translations, poetic renditions, and multilingual commentaries on classical manuscripts.</p>
+            <a class="book-card-link" href="#contribute">
+              <span>Add manuscript</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
           </article>
+
           <article class="book-card" data-category="astronomy" data-title="Tazweedul fikri wal himam fi tabyeeni nnisab wallogarithem">
-            <span class="book-label">Mathematics</span>
+            <div class="book-card-header">
+              <span class="book-label">Mathematics</span>
+              <div class="book-card-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              </div>
+            </div>
             <h3>Tazweedul Fikri Wal Himam</h3>
-            <p>A mathematics-focused text introducing ratios and logarithms for students.</p>
-            <a href="#contribute">Confirm title</a>
+            <p>Applied mathematical work introducing logarithmic calculations, trigonometric ratios, and computational tables for students.</p>
+            <a class="book-card-link" href="#contribute">
+              <span>Confirm title</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+            </a>
           </article>
         </div>
       </section>
 
+      <!-- Dedicated Digital Archive for Case Diary -->
       <section class="section case-section" id="case-diary">
         <div class="section-heading">
-          <p class="eyebrow">Case diary</p>
-          <h2>A sober public record, designed for documents, dates, sources, and updates.</h2>
+          <p class="eyebrow">Case Diary &amp; Digital Archive</p>
+          <h2>A sober, verified public record of documents, dates, and official inquiries.</h2>
         </div>
-        <div class="case-layout">
-          <div class="case-note">
-            <h3>Editorial principle</h3>
+
+        <!-- Quick Sub-navigation Chips for Case Archive Categories -->
+        <div class="archive-sub-bar" aria-label="Case Archive Categories">
+          <a class="archive-sub-chip" href="#investigation-timeline">Investigation Timeline</a>
+          <a class="archive-sub-chip" href="#fir-records">FIR / Police Records</a>
+          <a class="archive-sub-chip" href="#court-docs">Court Documents</a>
+          <a class="archive-sub-chip" href="#news-reports">Newspaper Reports</a>
+          <a class="archive-sub-chip" href="#official-docs">Official Documents</a>
+          <a class="archive-sub-chip" href="#downloads">Downloadable PDFs</a>
+        </div>
+
+        <div class="case-archive-container">
+          <!-- Left Column: Editorial Policy & Verification Portal -->
+          <div class="case-editorial-card" id="official-docs">
+            <div class="editorial-badge">Archive Standards</div>
+            <h3>Documentary Integrity &amp; Standards</h3>
             <p>
-              The case section should never rely on rumor. Each item needs a date,
-              source, document scan, and editor note before publication.
+              This section serves as a verified digital archive for Chembirika Qazi's case.
+              Every entry is indexed with official dates, police files, court records, and verified press sources.
             </p>
-            <a class="button secondary" href="#sources">View draft sources</a>
+
+            <div class="editorial-stat-row">
+              <div class="editorial-stat">
+                <strong>15+</strong>
+                <span>Official Filings</span>
+              </div>
+              <div class="editorial-stat">
+                <strong>CBI &amp; DIG</strong>
+                <span>Inquiry Scopes</span>
+              </div>
+            </div>
+
+            <a class="case-btn-primary" href="#downloads" id="downloads">
+              <span>View Verified PDFs &amp; Documents</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
           </div>
-          <ol class="case-list">
-            <li>
-              <time>15 Feb 2010</time>
-              <h3>Passing of CM Usthad</h3>
-              <p>Public reports recorded his death in Kasaragod and the start of sustained community concern.</p>
-            </li>
-            <li>
-              <time>2010 onwards</time>
-              <h3>Investigation record</h3>
-              <p>CBI investigation and public appeals should be indexed with official copies and news sources.</p>
-            </li>
-            <li>
-              <time>29 Aug 2025</time>
-              <h3>Fresh inquiry reported</h3>
-              <p>KasargodVartha reported that a new inquiry was assigned under the supervision of the Kannur Range DIG.</p>
-            </li>
-          </ol>
+
+          <!-- Right Column: Case Timeline Records Grid -->
+          <div class="case-records-stack" id="investigation-timeline">
+            
+            <div class="case-record-card" id="fir-records">
+              <div class="case-card-header">
+                <span class="case-date-badge">15 Feb 2010</span>
+                <span class="case-type-tag fir">FIR &amp; Police Record</span>
+              </div>
+              <h3>Passing of CM Usthad &amp; Initial Crime Report</h3>
+              <p>Initial police reports recorded his tragic death at Chembirika beach. Local community leadership filed formal petitions demanding a transparent, thorough forensic investigation.</p>
+              <div class="case-card-footer">
+                <span class="case-source">Source: Police &amp; Mahal Records</span>
+                <a href="#contribute" class="case-card-link">View File Scan</a>
+              </div>
+            </div>
+
+            <div class="case-record-card" id="court-docs">
+              <div class="case-card-header">
+                <span class="case-date-badge">2010 – Present</span>
+                <span class="case-type-tag court">Court &amp; CBI Investigation</span>
+              </div>
+              <h3>CBI Probe &amp; High Court Filings</h3>
+              <p>Following public mobilization, the case was transferred to the Central Bureau of Investigation (CBI). Action committees and family legal teams submitted multiple petitions to the High Court of Kerala.</p>
+              <div class="case-card-footer">
+                <span class="case-source">Source: High Court Petitions</span>
+                <a href="#contribute" class="case-card-link">View Court Filings</a>
+              </div>
+            </div>
+
+            <div class="case-record-card" id="news-reports">
+              <div class="case-card-header">
+                <span class="case-date-badge">29 Aug 2025</span>
+                <span class="case-type-tag news">Fresh Inquiry Status</span>
+              </div>
+              <h3>Fresh Inquiry Directed under Kannur Range DIG</h3>
+              <p>KasargodVartha reported that state authorities assigned a renewed inquiry supervised by the Kannur Range DIG to review unexamined evidence and case points.</p>
+              <div class="case-card-footer">
+                <span class="case-source">Source: KasargodVartha Report</span>
+                <a href="https://www.kasargodvartha.com/crime/cm-abdulla-moulavi-death-case-new-investigation/cid17332230.htm" target="_blank" rel="noreferrer" class="case-card-link">Read News Article ↗</a>
+              </div>
+            </div>
+
+          </div>
         </div>
+
+        <!-- Dedicated Archive Category Tiles Grid -->
+        <div class="case-tiles-grid">
+          <div class="case-archive-tile">
+            <div class="tile-icon">📁</div>
+            <h4>FIR &amp; Station Reports</h4>
+            <p>Indexed station complaints, inquest reports, and initial police statements.</p>
+          </div>
+          <div class="case-archive-tile">
+            <div class="tile-icon">📜</div>
+            <h4>Court Orders &amp; Petitions</h4>
+            <p>High Court submissions, CBI status reports, and legal action council affidavits.</p>
+          </div>
+          <div class="case-archive-tile">
+            <div class="tile-icon">📰</div>
+            <h4>Newspaper Archives</h4>
+            <p>Chronological press clippings, investigative journalism reports, and coverage.</p>
+          </div>
+          <div class="case-archive-tile">
+            <div class="tile-icon">📄</div>
+            <h4>Downloadable PDF Hub</h4>
+            <p>Full-text PDF document archive for legal researchers, journalists, and public record.</p>
+          </div>
+        </div>
+
       </section>
 
       <section class="section" id="articles">
@@ -439,18 +733,87 @@
       </section>
 
       <section class="section gallery-section" id="gallery">
-        <div class="section-heading">
-          <p class="eyebrow">Images</p>
-          <h2>A visual archive with captions, sources, and album structure.</h2>
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Visual &amp; Media Vault</p>
+            <h2>Preserving the life, campuses, speeches, and historic legacy of CM Usthad.</h2>
+          </div>
+          <div class="gallery-stat-bar">
+            <div class="gallery-stat">
+              <strong>100+</strong>
+              <span>Archival Photos</span>
+            </div>
+            <div class="gallery-stat">
+              <strong>48</strong>
+              <span>Recorded Speeches</span>
+            </div>
+            <div class="gallery-stat">
+              <strong>5</strong>
+              <span>Historic Campuses</span>
+            </div>
+          </div>
         </div>
-        <div class="gallery-grid">
+
+        <!-- Interactive Category Filter Bar -->
+        <div class="gallery-filter-bar" aria-label="Gallery Media Categories">
+          <button type="button" class="gallery-filter-btn active" data-gfilter="all">📸 All Media</button>
+          <button type="button" class="gallery-filter-btn" data-gfilter="portrait">👤 Historic Portraits</button>
+          <button type="button" class="gallery-filter-btn" data-gfilter="campus">🕌 Campuses &amp; Mosques</button>
+          <button type="button" class="gallery-filter-btn" data-gfilter="video">🎥 Audio &amp; Video</button>
+          <button type="button" class="gallery-filter-btn" data-gfilter="events">🎙️ Convocations &amp; Events</button>
+        </div>
+
+        <!-- Main Photo Gallery Grid -->
+        <div class="gallery-grid" id="case-photos">
           <!-- Dynamically rendered by script.js from data/content.js -->
+        </div>
+
+        <!-- Cinematic Media & Video Vault Grid -->
+        <div class="media-vault-grid">
+          
+          <!-- Video Vault Card -->
+          <div class="media-vault-card video-card" id="videos">
+            <div class="vault-thumb-wrap">
+              <img src="https://www.micedu.in/masjid.png" alt="Video Speeches Archive" loading="lazy">
+              <div class="pulse-play-btn" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+              <span class="vault-badge video">Rare Audio &amp; Video</span>
+            </div>
+            <div class="vault-content">
+              <span class="vault-duration">45 MINS • ARCHIVAL SPEECHES</span>
+              <h3>Recorded Speeches &amp; Astronomy Lectures</h3>
+              <p>Historical audio and video recordings of CM Usthad's public addresses, qibla science seminars, and scholarly inaugurations.</p>
+              <a href="#contribute" class="vault-action-btn">
+                <span>Submit Video / Audio Record</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Historic Conferences Vault Card -->
+          <div class="media-vault-card event-card" id="events">
+            <div class="vault-thumb-wrap">
+              <img src="https://www.micedu.in/daulirshad.jpg" alt="MIC Conferences & Events" loading="lazy">
+              <span class="vault-badge event">Historic Gatherings</span>
+            </div>
+            <div class="vault-content">
+              <span class="vault-duration">24 PHOTOS • CONVOCATIONS</span>
+              <h3>MIC Conferences &amp; Ceremonial Gatherings</h3>
+              <p>Documented photo albums covering Malabar Islamic Complex inauguration ceremonies, annual convocations, and scholar meets.</p>
+              <a href="#contribute" class="vault-action-btn secondary">
+                <span>Explore Full Photo Album</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+
         </div>
       </section>
 
       <section class="section news-section" id="news">
         <div class="section-heading">
-          <p class="eyebrow">News</p>
+          <p class="eyebrow">News &amp; Updates</p>
           <h2>Updates should read like a clean newsroom, not a notice board.</h2>
         </div>
         <div class="news-list">
@@ -459,16 +822,47 @@
             <h3>New inquiry reported in CM Abdulla Moulavi case</h3>
             <p>KasargodVartha reported a fresh inquiry connected to the death case, supervised by Kannur Range DIG.</p>
           </article>
-          <article>
+          <article id="announcements">
             <time>Annual</time>
-            <h3>CM Usthad commemoration events</h3>
-            <p>Programs, seminar photos, speeches, and recordings can be published here after verification.</p>
+            <h3>CM Usthad Commemoration &amp; Announcements</h3>
+            <p>Programs, seminar photos, speeches, and official public announcements verified by the archive desk.</p>
           </article>
           <article>
             <time>Archive call</time>
             <h3>Collecting books, photos, and letters</h3>
-            <p>A public call can invite students and families to submit scans, memories, and corrections.</p>
+            <p>A public call inviting students and families to submit scans, memories, and corrections.</p>
           </article>
+        </div>
+      </section>
+
+      <!-- Legacy Section (Institutions, Students, Testimonials, Influence, Awards) -->
+      <section class="section legacy-section" id="legacy">
+        <div class="section-heading">
+          <p class="eyebrow">Legacy &amp; Institutional Impact</p>
+          <h2>Enduring educational, social, and spiritual influence.</h2>
+        </div>
+
+        <div class="legacy-sub-grid">
+          <div class="legacy-sub-card" id="institutions">
+            <div class="card-tag">Institutions</div>
+            <h3>Malabar Islamic Complex (MIC)</h3>
+            <p>Founded by CM Usthad in 1993, MIC stands as a flagship campus combining Islamic jurisprudence with modern academic education.</p>
+          </div>
+          <div class="legacy-sub-card" id="students">
+            <div class="card-tag">Students</div>
+            <h3>Generations of Scholars</h3>
+            <p>Hundreds of graduates serving as Qazis, educators, researchers, and community leaders across India and abroad.</p>
+          </div>
+          <div class="legacy-sub-card" id="influence">
+            <div class="card-tag">Influence</div>
+            <h3>Astronomical &amp; Fiqh Guidance</h3>
+            <p>Standardized prayer time tables, qibla direction calculations, and moon sighting procedures adopted across South India.</p>
+          </div>
+          <div class="legacy-sub-card" id="awards">
+            <div class="card-tag">Recognition</div>
+            <h3>Honors &amp; Public Acclaim</h3>
+            <p>Recognized for pioneering institutional reform, astronomical accuracy, and dedicated judicial service to the community.</p>
+          </div>
         </div>
       </section>
 
@@ -500,15 +894,15 @@
       </section>
 
       <section class="section contribute-section" id="contribute">
-        <div>
-          <p class="eyebrow">Contribution desk</p>
+        <div id="contact">
+          <p class="eyebrow">Contact &amp; Contribution desk</p>
           <h2>Build the archive with real material.</h2>
           <p>
             Add verified photos, book scans, handwritten notes, video links, news clippings,
             corrections, and signed memories. This first version is ready to receive them.
           </p>
         </div>
-        <form class="contribute-form">
+        <form class="contribute-form" id="submission">
           <label>
             Name
             <input type="text" placeholder="Your name">

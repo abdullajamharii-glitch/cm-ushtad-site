@@ -23,6 +23,20 @@ if (navToggle && siteNav) {
       navToggle.setAttribute("aria-expanded", "false");
     }
   });
+
+  document.querySelectorAll(".nav-dropdown-toggle").forEach(btn => {
+    btn.addEventListener("click", (e) => {
+      if (window.innerWidth <= 860) {
+        e.preventDefault();
+        const parent = btn.closest(".nav-dropdown");
+        const menu = parent ? parent.querySelector(".nav-dropdown-menu") : null;
+        if (menu) {
+          const isOpen = menu.classList.toggle("open");
+          btn.setAttribute("aria-expanded", String(isOpen));
+        }
+      }
+    });
+  });
 }
 
 /* ── Image dialog ── */
@@ -86,10 +100,15 @@ function renderSite() {
   if (bookGrid && data.books && data.books.length) {
     bookGrid.innerHTML = data.books.map(b => `
       <article class="book-card" data-category="${escHtml(b.category || '')}" data-title="${escHtml(b.title)}">
-        <span class="book-label">${escHtml(b.label || '')}</span>
+        <div class="book-card-header">
+          <span class="book-label">${escHtml(b.label || 'Book')}</span>
+          <div class="book-card-icon" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+        </div>
         <h3>${escHtml(b.title)}</h3>
         <p>${escHtml(b.description)}</p>
-        ${b.linkText ? `<a href="${escHtml(b.linkHref || '#contribute')}">${escHtml(b.linkText)}</a>` : ""}
+        ${b.linkText ? `<a class="book-card-link" href="${escHtml(b.linkHref || '#contribute')}"><span>${escHtml(b.linkText)}</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg></a>` : ""}
       </article>
     `).join("");
 
@@ -121,6 +140,27 @@ function renderSite() {
           item.dataset.alt,
           item.dataset.caption
         );
+      });
+    });
+
+    // Gallery filter button handlers
+    const filterBtns = document.querySelectorAll(".gallery-filter-btn");
+    filterBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        filterBtns.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        const filter = btn.dataset.gfilter;
+        document.querySelectorAll(".gallery-item").forEach(item => {
+          if (filter === "all") {
+            item.style.display = "";
+          } else if (filter === "portrait" && item.dataset.caption && item.dataset.caption.toLowerCase().includes("portrait")) {
+            item.style.display = "";
+          } else if (filter === "campus" && item.dataset.caption && (item.dataset.caption.toLowerCase().includes("mic") || item.dataset.caption.toLowerCase().includes("campus") || item.dataset.caption.toLowerCase().includes("masjid"))) {
+            item.style.display = "";
+          } else {
+            item.style.display = filter === "all" ? "" : "none";
+          }
+        });
       });
     });
   }
