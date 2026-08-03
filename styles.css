@@ -1,36 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
 
 :root {
-  /* ── Fonts ──
-     Primary body : Mulish   (Sheikh site — clean, readable)
-     Headings     : Poppins  (bold, geometric)
-     Display serif: Playfair Display (pull quotes, decorative)
-  */
+  /* ── Fonts ── */
   --font-sans:    'Mulish', 'Poppins', "Segoe UI", Arial, sans-serif;
   --font-heading: 'Poppins', 'Mulish', sans-serif;
   --font-display: 'Playfair Display', Georgia, serif;
 
-  /* ── Colour System: Sheikh Abubakr Ahmad Site ──
-     Primary green : #026860  (deep teal-emerald — buttons, accents)
-     Background    : #0f1f1e  (very dark teal-black for hero/footer)
-     Surface light : #f4f8f7  (very light teal-tinted white for main body)
-     Card surface  : #ffffff  (white cards)
-     Headings      : #0d1f1e  (near-black with teal tint)
-     Body text     : #3d5450  (dark slate-green)
-     Muted text    : #6b8a86  (muted teal-grey)
-     Border        : #d0e2e0  (light teal-tinted border)
-  */
-  --ink:        #0d1f1e;           /* near-black teal — headings        */
-  --muted:      #5a7a76;           /* muted teal-grey — body copy       */
-  --paper:      #f4f8f7;           /* very light teal-tinted page bg    */
+  /* ── Fluid Spacing Scale ── */
+  --space-xs: clamp(0.5rem, 0.8vw, 0.75rem);
+  --space-sm: clamp(0.75rem, 1vw, 1rem);
+  --space-md: clamp(1rem, 1.6vw, 1.5rem);
+  --space-lg: clamp(1.5rem, 2vw, 2.5rem);
+  --space-xl: clamp(2rem, 3vw, 4rem);
+
+  /* ── Fluid Section Padding ── */
+  --section-padding-v: clamp(3rem, 6vw, 7rem);
+  --section-padding-h: clamp(1rem, 4vw, 4rem);
+
+  /* ── Fluid Radii & Shadows ── */
+  --radius-sm: clamp(6px, 1vw, 10px);
+  --radius-md: clamp(12px, 1.5vw, 18px);
+  --radius-lg: clamp(18px, 2.5vw, 28px);
+  --radius-pill: 999px;
+
+  /* ── Fluid Container Width ── */
+  --content: min(1320px, calc(100vw - 32px));
+
+  /* ── Theme Colours ── */
+  --ink:        #0d1f1e;
+  --muted:      #5a7a76;
+  --paper:      #f4f8f7;
   --white:      #ffffff;
-  --line:       #cfe0dd;           /* soft teal border                  */
-  --green:      #026860;           /* Sheikh site green — primary brand */
-  --green-deep: #014d47;           /* deeper teal — hover, footer       */
-  --green-mid:  #038a80;           /* mid teal — lighter tone           */
-  --green-light:#e0f2f0;           /* very light teal surface           */
-  --gold:       #c9a84c;           /* warm gold — secondary accent      */
-  --gold-light: #e4c878;           /* lighter gold                      */
+  --line:       #cfe0dd;
+  --green:      #026860;
+  --green-deep: #014d47;
+  --green-mid:  #038a80;
+  --green-light:#e0f2f0;
+  --gold:       #c9a84c;
+  --gold-light: #e4c878;
   --gold-glow:  rgba(201,168,76,0.22);
   --gold-soft:  rgba(201,168,76,0.10);
   /* backward-compat aliases */
@@ -40,24 +47,70 @@
   --brass:      var(--gold);
   --brass-glow: var(--gold-glow);
   --maroon:     #026860;
-  --shadow:     0 16px 48px rgba(2, 104, 96, 0.09);
-  --shadow-lg:  0 24px 60px rgba(2, 104, 96, 0.16);
-  --radius: 12px;
-  --radius-lg: 16px;
-  --content: min(1180px, calc(100vw - 40px));
+  --shadow:     0 12px 36px rgba(2, 104, 96, 0.08);
+  --shadow-lg:  0 20px 50px rgba(2, 104, 96, 0.14);
+  --radius:     12px;
 }
 
-* {
+/* Safe Area Insets & Global Resets */
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   margin: 0;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
   color: var(--ink);
+  background: var(--paper);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Responsive Images & Media */
+img, video, iframe {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  object-fit: cover;
+}
+
+/* Responsive Utility Classes */
+.hide-mobile { display: block; }
+.hide-desktop { display: none; }
+
+@media (max-width: 768px) {
+  .hide-mobile { display: none !important; }
+  .hide-desktop { display: block !important; }
+  .stack-mobile { flex-direction: column !important; }
+  .center-mobile { text-align: center !important; }
+  .full-mobile { width: 100% !important; }
+}
+
+/* Touch Targets Minimum Dimensions */
+a, button, input, select, textarea, .nav-dropdown-toggle {
+  min-height: 44px;
+}
+
+/* Accessibility & Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
   background: var(--paper);
   font-family: var(--font-sans);
   line-height: 1.6;

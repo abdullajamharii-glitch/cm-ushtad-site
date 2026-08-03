@@ -15,18 +15,28 @@ if (navToggle && siteNav) {
   navToggle.addEventListener("click", () => {
     const isOpen = siteNav.classList.toggle("open");
     navToggle.setAttribute("aria-expanded", String(isOpen));
+    document.body.style.overflow = isOpen ? "hidden" : "";
   });
 
   siteNav.addEventListener("click", (event) => {
     if (event.target.matches("a")) {
       siteNav.classList.remove("open");
       navToggle.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && siteNav.classList.contains("open")) {
+      siteNav.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
     }
   });
 
   document.querySelectorAll(".nav-dropdown-toggle").forEach(btn => {
     btn.addEventListener("click", (e) => {
-      if (window.innerWidth <= 860) {
+      if (window.innerWidth <= 991) {
         e.preventDefault();
         const parent = btn.closest(".nav-dropdown");
         const menu = parent ? parent.querySelector(".nav-dropdown-menu") : null;
