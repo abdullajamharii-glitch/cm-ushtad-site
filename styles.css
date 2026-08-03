@@ -300,6 +300,54 @@ textarea {
   box-shadow: 0 6px 20px rgba(2,104,96,0.38);
 }
 
+/* ── Wall right CTA button (Highlighted) ── */
+.nfi-wall-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 20px;
+  background: linear-gradient(135deg, #026860 0%, #0d2523 100%);
+  color: #ffffff;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-decoration: none;
+  flex-shrink: 0;
+  font-family: 'Poppins', sans-serif;
+  transition: all 220ms ease;
+  box-shadow: 0 4px 18px rgba(2, 104, 96, 0.35);
+  border: 1px solid rgba(192, 94, 32, 0.5);
+  cursor: pointer;
+}
+
+.nfi-wall-btn:hover {
+  background: linear-gradient(135deg, #c05e20 0%, #026860 100%);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(192, 94, 32, 0.45);
+  border-color: #d4af37;
+}
+
+.nfi-wall-btn.active {
+  background: linear-gradient(135deg, #c05e20 0%, #026860 100%);
+  border-color: #d4af37;
+  box-shadow: 0 6px 20px rgba(192, 94, 32, 0.5);
+}
+
+.wall-btn-badge {
+  display: inline-flex;
+  align-items: center;
+  background: #c05e20;
+  color: #ffffff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 1px 6px;
+  border-radius: 999px;
+  box-shadow: 0 0 8px rgba(192, 94, 32, 0.6);
+}
+
 /* ── Hero section ── */
 .nfi-hero {
   position: relative;
