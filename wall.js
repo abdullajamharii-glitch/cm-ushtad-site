@@ -271,7 +271,6 @@
     initSearch();
     initTagPills();
     initModals();
-    initBottomNav();
     renderFeed();
   });
 
@@ -461,70 +460,12 @@
       docModal.addEventListener("click", (e) => { if (e.target === docModal) docModal.close(); });
     }
 
-  // ── Bottom Navigation (<768px) ──
-  function initBottomNav() {
-    const bnavBtns = document.querySelectorAll(".bnav-btn");
-    if (!bnavBtns.length) return;
-
-    bnavBtns.forEach(btn => {
-      btn.addEventListener("click", () => {
-        const action = btn.dataset.bnav;
-
-        // Update active bottom nav state
-        bnavBtns.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-
-        if (action === "home") {
-          activeFeedTab = "latest";
-          activeCategory = "all";
-          activeSearchQuery = "";
-          const input = document.getElementById("wallSearchInput");
-          if (input) input.value = "";
-          
-          document.querySelectorAll(".wall-feed-tab").forEach(tab => {
-            tab.classList.toggle("active", tab.dataset.wtab === "latest");
-          });
-
-          renderFeed();
-          window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-        else if (action === "search") {
-          const searchInput = document.getElementById("wallSearchInput");
-          if (searchInput) {
-            searchInput.focus();
-            searchInput.scrollIntoView({ behavior: "smooth", block: "center" });
-          }
-        }
-        else if (action === "media") {
-          activeFeedTab = "media";
-          activeCategory = "all";
-          
-          document.querySelectorAll(".wall-feed-tab").forEach(tab => {
-            tab.classList.toggle("active", tab.dataset.wtab === "media");
-          });
-
-          renderFeed();
-          const feedContainer = document.getElementById("wallPostsFeed");
-          if (feedContainer) feedContainer.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-        else if (action === "docs") {
-          activeCategory = "Historical Document";
-          activeFeedTab = "all";
-
-          renderFeed();
-          const feedContainer = document.getElementById("wallPostsFeed");
-          if (feedContainer) feedContainer.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-        else if (action === "myposts") {
-          activeFeedTab = "my";
-          activeCategory = "all";
-
-          renderFeed();
-          const feedContainer = document.getElementById("wallPostsFeed");
-          if (feedContainer) feedContainer.scrollIntoView({ behavior: "smooth", block: "start" });
-        }
-      });
-    });
+    const profModal = document.getElementById("profileModal");
+    const closeProf = document.getElementById("closeProfileModal");
+    if (closeProf && profModal) {
+      closeProf.addEventListener("click", () => profModal.close());
+      profModal.addEventListener("click", (e) => { if (e.target === profModal) profModal.close(); });
+    }
   }
 
   // ══════════════════════════════════════
