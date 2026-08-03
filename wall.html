@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacy Wall — Community Archive | CM Usthad Archive</title>
+    <meta name="description" content="A real-time archival social platform for students, researchers, family, and followers to preserve memories, historical documents, photographs, and scholarly discussions about CM Usthad.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="data/favicon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <script src="data/content.js"></script>
+  </head>
+  <body>
+    <!-- ═══ PAGE FRAME ═══ -->
+    <div class="nfi-page" id="top">
+
+      <!-- Architectural Sketch Background -->
+      <div class="nfi-hero-bg-sketch" aria-hidden="true">
+        <img src="https://www.micedu.in/college.png" alt="" class="nfi-hero-sketch-img">
+      </div>
+
+      <!-- Header Navigation -->
+      <div class="nfi-header-wrap">
+        <header class="nfi-header">
+          <a class="nfi-brand" href="index.html#top" aria-label="CM Usthad Archive home">
+            <span class="nfi-brand-mark"><img src="data/cm_logo.png" alt="CM Usthad Logo" class="nfi-brand-img"></span>
+            <span class="nfi-brand-text">
+              <strong>CM Usthad</strong>
+              <small>Archive &amp; Legacy</small>
+            </span>
+          </a>
+
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Open navigation">
+            <span></span><span></span><span></span>
+          </button>
+
+          <nav class="nfi-nav" id="primaryNav">
+
+            <!-- 1. Home -->
+            <div class="nav-dropdown">
+              <a href="index.html" class="nav-dropdown-toggle nfi-nav-link">
+                Home
+                <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l4 4 4-4"/></svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="index.html#top">Hero</a>
+                <a href="index.html#bio">Introduction</a>
+                <a href="index.html#quick-facts">Highlights</a>
+              </div>
+            </div>
+
+            <!-- 2. Life -->
+            <div class="nav-dropdown">
+              <a href="life.html" class="nav-dropdown-toggle nfi-nav-link">
+                Life
+                <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l4 4 4-4"/></svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="life.html#bio">Biography</a>
+                <a href="life.html#timeline">Timeline</a>
+                <a href="life.html#family">Family</a>
+                <a href="life.html#education">Education</a>
+                <a href="life.html#career">Career</a>
+              </div>
+            </div>
+
+            <!-- 3. Works -->
+            <div class="nav-dropdown">
+              <a href="works.html" class="nav-dropdown-toggle nfi-nav-link">
+                Works
+                <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l4 4 4-4"/></svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="works.html#books">Books</a>
+                <a href="works.html#articles">Articles</a>
+                <a href="works.html#lectures">Lectures</a>
+                <a href="works.html#research">Research</a>
+                <a href="works.html#fatwas">Fatwas</a>
+              </div>
+            </div>
+
+            <!-- 4. Legacy -->
+            <div class="nav-dropdown">
+              <a href="legacy.html" class="nav-dropdown-toggle nfi-nav-link">
+                Legacy
+                <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l4 4 4-4"/></svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="legacy.html#institutions">Institutions</a>
+                <a href="legacy.html#students">Students</a>
+                <a href="legacy.html#voices">Testimonials</a>
+                <a href="legacy.html#influence">Influence</a>
+                <a href="legacy.html#awards">Awards &amp; Recognition</a>
+              </div>
+            </div>
+
+            <!-- 5. Case Diary -->
+            <div class="nav-dropdown">
+              <a href="case-diary.html" class="nav-dropdown-toggle nfi-nav-link">
+                Case Diary
+                <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l4 4 4-4"/></svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="case-diary.html#case-diary">Case Overview</a>
+                <a href="case-diary.html#investigation-timeline">Investigation Timeline</a>
+                <a href="case-diary.html#fir-records">FIR / Police Records</a>
+                <a href="case-diary.html#court-docs">Court Documents</a>
+                <a href="case-diary.html#news-reports">Newspaper Reports</a>
+                <a href="case-diary.html#official-docs">Official Documents</a>
+                <a href="case-diary.html#downloads">Downloadable PDFs</a>
+              </div>
+            </div>
+
+            <!-- 6. Wall (Active) -->
+            <div class="nav-dropdown">
+              <a href="wall.html" class="nav-dropdown-toggle nfi-nav-link active">
+                Wall
+                <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l4 4 4-4"/></svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="wall.html#feed">Community Feed</a>
+                <a href="wall.html#photos">Photo Archive</a>
+                <a href="wall.html#documents">Document Hub</a>
+                <a href="wall.html#videos">Video Vault</a>
+                <a href="wall.html#official">Official Posts</a>
+              </div>
+            </div>
+
+            <!-- 7. Gallery -->
+            <div class="nav-dropdown">
+              <a href="gallery.html" class="nav-dropdown-toggle nfi-nav-link">
+                Gallery
+                <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l4 4 4-4"/></svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="gallery.html#gallery">Images</a>
+                <a href="gallery.html#videos">Videos</a>
+                <a href="gallery.html#events">Events</a>
+              </div>
+            </div>
+
+            <!-- 8. News -->
+            <div class="nav-dropdown">
+              <a href="news.html" class="nav-dropdown-toggle nfi-nav-link">
+                News
+                <svg class="dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 1l4 4 4-4"/></svg>
+              </a>
+              <div class="nav-dropdown-menu">
+                <a href="news.html#news">Latest Updates</a>
+                <a href="news.html#announcements">Announcements</a>
+              </div>
+            </div>
+
+          </nav>
+
+          <!-- Contact Action Button -->
+          <div class="nav-dropdown">
+            <a href="contact.html" class="nfi-contact-btn">
+              Contact
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </a>
+            <div class="nav-dropdown-menu">
+              <a href="contact.html#contact">Contact Info</a>
+              <a href="contact.html#contribute">Contributions</a>
+              <a href="contact.html#submission">Archive Submission</a>
+            </div>
+          </div>
+        </header>
+      </div>
+
+      <!-- Page Header Banner -->
+      <div class="nfi-page-banner">
+        <div class="nfi-eyebrow-pill">
+          <span class="nfi-pill-badge">CM</span>
+          <span class="nfi-pill-text">Abdulla Moulavi Chembarikka</span>
+        </div>
+        <h1>Legacy Wall — Community Archive</h1>
+        <p class="nfi-hero-copy">A scholarly archival social platform for students, researchers, family, and followers to preserve memories, historical documents, photographs, and scholarly commentary.</p>
+      </div>
+
+    </div>
+
+    <!-- ═══ MAIN 3-COLUMN WALL LAYOUT ═══ -->
+    <main class="wall-main-wrap">
+      <div class="wall-grid-container">
+
+        <!-- ══════════════════════════════════════
+             LEFT SIDEBAR: NAV, PROFILES & FILTERS
+        ══════════════════════════════════════ -->
+        <aside class="wall-sidebar-left">
+          
+          <!-- Contributor Profile Card -->
+          <div class="wall-user-profile-card">
+            <div class="profile-card-header">
+              <img src="data/cm_usthad_hd.png" alt="Contributor Avatar" class="profile-avatar">
+              <div class="profile-meta">
+                <strong class="profile-name">Archive Desk</strong>
+                <span class="profile-handle">@cm_archive</span>
+                <span class="badge-tag official">🟢 Official Archive</span>
+              </div>
+            </div>
+            <p class="profile-bio">Preserving historical records, photographs, manuscripts, and verified contributions related to CM Usthad.</p>
+            <div class="profile-stats-row">
+              <div class="stat-item">
+                <strong>248</strong>
+                <span>Posts</span>
+              </div>
+              <div class="stat-item">
+                <strong>65</strong>
+                <span>Docs</span>
+              </div>
+              <div class="stat-item">
+                <strong>112</strong>
+                <span>Photos</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Community Sidebar Nav -->
+          <div class="wall-nav-box" aria-label="Community Navigation">
+            <h4 class="wall-sidebar-title">Archive Navigation</h4>
+            <button type="button" class="wall-nav-item active" data-snav="all">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              <span>Wall Feed</span>
+            </button>
+            <button type="button" class="wall-nav-item" data-snav="photos">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              <span>Photos</span>
+            </button>
+            <button type="button" class="wall-nav-item" data-snav="documents">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              <span>Documents</span>
+            </button>
+            <button type="button" class="wall-nav-item" data-snav="videos">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+              <span>Videos &amp; Audio</span>
+            </button>
+            <button type="button" class="wall-nav-item" data-snav="saved">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+              <span>Saved / Bookmarks</span>
+            </button>
+            <button type="button" class="wall-nav-item" data-snav="myposts">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <span>My Contributions</span>
+            </button>
+          </div>
+
+          <!-- Color-Coded Contributor Badge Filter -->
+          <div class="wall-filter-box">
+            <h4 class="wall-sidebar-title">Contributor Badges</h4>
+            <div class="badge-filter-list">
+              <button type="button" class="badge-chip-btn active" data-badgetype="all">All Roles</button>
+              <button type="button" class="badge-chip-btn official" data-badgetype="Official Archive">🟢 Official Archive</button>
+              <button type="button" class="badge-chip-btn researcher" data-badgetype="Researcher">🔵 Researcher</button>
+              <button type="button" class="badge-chip-btn family" data-badgetype="Family">🟣 Family</button>
+              <button type="button" class="badge-chip-btn student" data-badgetype="Student">🟠 Student</button>
+            </div>
+          </div>
+
+          <!-- Historical Era Filter -->
+          <div class="wall-filter-box">
+            <h4 class="wall-sidebar-title">Historical Era</h4>
+            <div class="era-filter-list">
+              <button type="button" class="era-chip-btn active" data-era="all">All Eras</button>
+              <button type="button" class="era-chip-btn" data-era="1940–1960">1940–1960 (Early Life)</button>
+              <button type="button" class="era-chip-btn" data-era="1960–1980">1960–1980 (Scholarly)</button>
+              <button type="button" class="era-chip-btn" data-era="1980–1995">1980–1995 (MIC &amp; Qazi)</button>
+              <button type="button" class="era-chip-btn" data-era="Case Diary">Case Diary &amp; CBI</button>
+              <button type="button" class="era-chip-btn" data-era="Legacy">Legacy Today</button>
+            </div>
+          </div>
+
+        </aside>
+
+        <!-- ══════════════════════════════════════
+             CENTER FEED: COMPOSER & TIMELINE
+        ══════════════════════════════════════ -->
+        <section class="wall-feed-center">
+
+          <!-- Sticky Post Composer Card -->
+          <div class="wall-composer-card" id="composer">
+            <div class="composer-header">
+              <img src="data/cm_usthad_hd.png" alt="User Avatar" class="composer-avatar">
+              <div class="composer-title-wrap">
+                <h3>Share an Archival Contribution</h3>
+                <span class="composer-sub">Submit memories, documents, photos, audio, or historical notes.</span>
+              </div>
+            </div>
+
+            <form id="wallPostForm" class="composer-form">
+              
+              <!-- Form Top Row: Category & Role Selection -->
+              <div class="composer-row-2">
+                <label>
+                  <span>Contribution Category *</span>
+                  <select id="postCategorySelect" required>
+                    <option value="Memory">Memory / Reminiscence</option>
+                    <option value="Photograph">Historical Photograph</option>
+                    <option value="Historical Document">Historical Document / Manuscript</option>
+                    <option value="Newspaper">Newspaper Clippings</option>
+                    <option value="Audio Recording">Audio Recording / Lecture</option>
+                    <option value="Video">Video Footage</option>
+                    <option value="Article">Research Article</option>
+                    <option value="Question">Query / Discussion</option>
+                    <option value="Correction">Archival Note / Correction</option>
+                    <option value="Official Update">Official Update</option>
+                  </select>
+                </label>
+
+                <label>
+                  <span>Contributor Role *</span>
+                  <select id="postRoleSelect" required>
+                    <option value="Student">Student / Disciple</option>
+                    <option value="Researcher">Researcher / Scholar</option>
+                    <option value="Family">Family / Relative</option>
+                    <option value="Official Archive">Official Archive</option>
+                    <option value="Contributor">Community Contributor</option>
+                  </select>
+                </label>
+              </div>
+
+              <!-- Main Post Text Area -->
+              <div class="composer-textarea-wrap">
+                <textarea id="postContentInput" rows="3" placeholder="Share your memories, historical documents, photographs, or thoughts about CM Usthad..." required></textarea>
+              </div>
+
+              <!-- Extra Archival Metadata Inputs -->
+              <div class="composer-metadata-grid">
+                <input type="text" id="postTitleInput" placeholder="Contribution Title / Document Name (Optional)">
+                <input type="text" id="postLocationInput" placeholder="Location (e.g. Chembirika, Vellore, Chattanchal)">
+                <input type="text" id="postDateInput" placeholder="Event Date / Historical Year (e.g. 15 April 1984)">
+                <select id="postEraSelect">
+                  <option value="1980–1995">Era: 1980–1995 (MIC & Qazi)</option>
+                  <option value="1960–1980">Era: 1960–1980 (Scholarly)</option>
+                  <option value="1940–1960">Era: 1940–1960 (Early Life)</option>
+                  <option value="Case Diary">Era: Case Diary & Inquiry</option>
+                  <option value="Legacy">Era: Continuing Legacy</option>
+                </select>
+              </div>
+
+              <!-- Attachments URL / Inputs -->
+              <div class="composer-attachments-row">
+                <input type="url" id="postMediaUrlInput" placeholder="Image URL / PDF URL / Video Link (Optional)">
+                <input type="text" id="postHashtagsInput" placeholder="#Hashtags (e.g. #IlmulFalak #MIC #Kasargod)">
+              </div>
+
+              <!-- Action Bar & Submit -->
+              <div class="composer-footer">
+                <div class="composer-quick-tools">
+                  <span class="tool-chip" title="Add Image">📸 Image</span>
+                  <span class="tool-chip" title="Add PDF / Document">📄 PDF Document</span>
+                  <span class="tool-chip" title="Add Video / Audio">🎥 Video / Audio</span>
+                  <span class="tool-chip" title="Location Tag">📍 Location</span>
+                </div>
+
+                <button type="submit" class="composer-submit-btn">
+                  <span>Submit Contribution</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                </button>
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Feed Category Tabs -->
+          <div class="wall-tabs-bar" aria-label="Feed Tabs">
+            <button type="button" class="wall-tab-btn active" data-tab="all">Latest</button>
+            <button type="button" class="wall-tab-btn" data-tab="featured">Featured</button>
+            <button type="button" class="wall-tab-btn" data-tab="official">Official</button>
+            <button type="button" class="wall-tab-btn" data-tab="media">Media</button>
+            <button type="button" class="wall-tab-btn" data-tab="research">Research</button>
+          </div>
+
+          <!-- Search & Hashtag Bar -->
+          <div class="wall-search-box-wrap">
+            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="search" id="wallSearchInput" placeholder="Search contributions by keywords, people, documents, or #hashtags..." aria-label="Search wall feed">
+            <button type="button" id="clearWallSearch" class="clear-search-btn" style="display:none;">✕</button>
+          </div>
+
+          <!-- Trending Hashtag Quick Bar -->
+          <div class="wall-tag-pills-bar">
+            <span class="tag-pill-label">Popular Topics:</span>
+            <button type="button" class="tag-pill-btn" data-htag="#CMUsthad">#CMUsthad</button>
+            <button type="button" class="tag-pill-btn" data-htag="#IlmulFalak">#IlmulFalak</button>
+            <button type="button" class="tag-pill-btn" data-htag="#MICChattanchal">#MICChattanchal</button>
+            <button type="button" class="tag-pill-btn" data-htag="#QaziChembarikka">#QaziChembarikka</button>
+            <button type="button" class="tag-pill-btn" data-htag="#Manuscript">#Manuscript</button>
+            <button type="button" class="tag-pill-btn" data-htag="#CaseJustice">#CaseJustice</button>
+          </div>
+
+          <!-- Active Feed Timeline Container -->
+          <div class="wall-feed-list" id="wallPostsFeed">
+            <!-- Dynamically populated by wall.js -->
+          </div>
+
+        </section>
+
+        <!-- ══════════════════════════════════════
+             RIGHT SIDEBAR: WIDGETS & SPOTLIGHTS
+        ══════════════════════════════════════ -->
+        <aside class="wall-sidebar-right">
+
+          <!-- Today's Archive Spotlight -->
+          <div class="wall-widget-card spotlight-card">
+            <div class="widget-badge">On This Day</div>
+            <h3>15 February 2010</h3>
+            <p>Martyrdom of CM Abdulla Moulavi (Chembirika Qazi). A day remembered with reverence, community solidarity, and ongoing pursuit of documented truth.</p>
+            <a href="case-diary.html" class="widget-link">View Case Records →</a>
+          </div>
+
+          <!-- Featured Book Spotlight -->
+          <div class="wall-widget-card book-spotlight-card">
+            <div class="widget-header">
+              <span class="widget-tag">Featured Work</span>
+            </div>
+            <div class="book-widget-body">
+              <img src="data/ente_kadha_cover.jpg" alt="Ente Kadha Cover" class="book-widget-img">
+              <div>
+                <h4>Ente Kadha: Vidhyabhyasathinteyum</h4>
+                <p class="book-widget-author">by Qazi CM Abdulla Moulavi</p>
+                <span class="book-widget-pub">Published by Book Plus</span>
+              </div>
+            </div>
+            <a href="https://bookplus.co.in/books/ente-kadha-vidhyabhasathinteyum/" target="_blank" rel="noreferrer" class="widget-cta-btn">
+              <span>Get on BookPlus ↗</span>
+            </a>
+          </div>
+
+          <!-- Official Announcements -->
+          <div class="wall-widget-card">
+            <h4 class="wall-sidebar-title">Official Announcements</h4>
+            <div class="announcement-list">
+              <div class="announcement-item">
+                <span class="announcement-date">Aug 29, 2025</span>
+                <h5>Fresh Inquiry Directed under DIG</h5>
+                <p>State authorities assigned a renewed inquiry supervised by Kannur Range DIG to review evidence.</p>
+                <a href="case-diary.html#news-reports" class="announcement-link">Read Update →</a>
+              </div>
+              <div class="announcement-item">
+                <span class="announcement-date">Open Call</span>
+                <h5>Manuscript &amp; Letter Collection</h5>
+                <p>Disciples and families are invited to submit rare letters, photographs, and lecture recordings.</p>
+                <a href="contact.html#contribute" class="announcement-link">Submit Archival File →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Active Contributors -->
+          <div class="wall-widget-card">
+            <h4 class="wall-sidebar-title">Verified Contributors</h4>
+            <div class="contributors-list">
+              <div class="contributor-row">
+                <img src="data/cm_usthad_hd.png" alt="Avatar" class="contrib-avatar">
+                <div class="contrib-info">
+                  <strong>Archive Editorial Desk</strong>
+                  <span class="badge-tag official">🟢 Official Archive</span>
+                </div>
+              </div>
+              <div class="contributor-row">
+                <img src="data/vellore_scholarly.png" alt="Avatar" class="contrib-avatar">
+                <div class="contrib-info">
+                  <strong>Prof. Abdurrahman Baqawi</strong>
+                  <span class="badge-tag student">🟠 Student</span>
+                </div>
+              </div>
+              <div class="contributor-row">
+                <img src="data/qazi_mahal.png" alt="Avatar" class="contrib-avatar">
+                <div class="contrib-info">
+                  <strong>Dr. Ibrahim Chembirika</strong>
+                  <span class="badge-tag researcher">🔵 Researcher</span>
+                </div>
+              </div>
+              <div class="contributor-row">
+                <img src="data/chembirika_coastal.png" alt="Avatar" class="contrib-avatar">
+                <div class="contrib-info">
+                  <strong>C.M. Mohammad Shareef</strong>
+                  <span class="badge-tag family">🟣 Family</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Recently Verified Documents -->
+          <div class="wall-widget-card">
+            <h4 class="wall-sidebar-title">Recent Document Scans</h4>
+            <div class="recent-docs-list">
+              <div class="doc-item">
+                <span class="doc-icon">📄</span>
+                <div>
+                  <strong>Qibla Azimuth Calculation Table (1991)</strong>
+                  <small>PDF • 3.2 MB • Preserved</small>
+                </div>
+              </div>
+              <div class="doc-item">
+                <span class="doc-icon">📜</span>
+                <div>
+                  <strong>MIC Charter Foundation Minutes (1993)</strong>
+                  <small>Scan • 1.8 MB • Official</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </aside>
+
+      </div>
+    </main>
+
+    <!-- ═══ MUSEUM-STYLE DOCUMENT VIEWER MODAL ═══ -->
+    <dialog class="doc-viewer-dialog" id="docViewerModal">
+      <div class="doc-dialog-content">
+        <button type="button" class="doc-dialog-close" id="closeDocModal">✕</button>
+        <div class="doc-dialog-header">
+          <span class="doc-dialog-badge" id="modalDocCategory">Historical Document</span>
+          <h2 id="modalDocTitle">Document Title</h2>
+          <p class="doc-dialog-meta" id="modalDocMeta">Archival ID: DOC-1991 • Verified by Archive Committee</p>
+        </div>
+        <div class="doc-dialog-body">
+          <div class="doc-preview-area" id="modalDocPreview">
+            <!-- Rendered by JS: Image preview or PDF iframe -->
+          </div>
+          <div class="doc-info-sidebar">
+            <h4>Document Metadata</h4>
+            <ul class="doc-meta-list">
+              <li><strong>Author / Source:</strong> <span id="modalDocAuthor">CM Usthad</span></li>
+              <li><strong>Historical Date:</strong> <span id="modalDocDate">1991</span></li>
+              <li><strong>Location:</strong> <span id="modalDocLoc">Chattanchal, Kasaragod</span></li>
+              <li><strong>File Format:</strong> <span id="modalDocFormat">PDF Document (Scan)</span></li>
+              <li><strong>Verification:</strong> <span class="badge-tag official">🟢 Verified Authentic</span></li>
+            </ul>
+            <div class="doc-actions">
+              <a href="#" id="modalDocDownloadBtn" class="doc-btn-primary" download>
+                <span>Download Document PDF</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- ═══ CONTRIBUTOR PROFILE MODAL ═══ -->
+    <dialog class="profile-dialog" id="profileModal">
+      <div class="profile-dialog-content">
+        <button type="button" class="profile-dialog-close" id="closeProfileModal">✕</button>
+        <div class="profile-modal-header">
+          <img src="data/cm_usthad_hd.png" alt="Avatar" id="pModalAvatar" class="profile-modal-avatar">
+          <div class="profile-modal-meta">
+            <h3 id="pModalName">User Name</h3>
+            <span id="pModalHandle" class="profile-handle">@handle</span>
+            <span id="pModalBadge" class="badge-tag official">🟢 Official Archive</span>
+          </div>
+        </div>
+        <div class="profile-modal-body">
+          <p id="pModalBio">Contributor biography details...</p>
+          <div class="profile-modal-stats">
+            <div class="stat-box">
+              <strong id="pModalPostsCount">12</strong>
+              <span>Contributions</span>
+            </div>
+            <div class="stat-box">
+              <strong id="pModalDocsCount">4</strong>
+              <span>Documents</span>
+            </div>
+            <div class="stat-box">
+              <strong id="pModalAppreciationsCount">128</strong>
+              <span>Appreciations</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand-col">
+          <div class="footer-brand">
+            <div class="footer-brand-mark">CM</div>
+            <div>
+              <strong>CM Usthad Archive</strong>
+              <span>Archive &amp; Legacy</span>
+            </div>
+          </div>
+          <p class="footer-tagline">A dedicated archive preserving the life, writings, institutional vision, and public service of C. M. Abdulla Moulavi — Chembirika Qazi.</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html#bio">Biography</a></li>
+            <li><a href="works.html#books">Books &amp; Writings</a></li>
+            <li><a href="case-diary.html#case-diary">Case Diary</a></li>
+            <li><a href="wall.html">Legacy Wall Feed</a></li>
+            <li><a href="gallery.html">Gallery Vault</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">Community</h4>
+          <ul class="footer-links">
+            <li><a href="wall.html#photos">Photo Archive</a></li>
+            <li><a href="wall.html#documents">Document Hub</a></li>
+            <li><a href="contact.html#contribute">Contribute Material</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; <span id="footerYear"></span> CM Usthad Archive. Maintained in memory of C. M. Abdulla Moulavi (1933–2010).</p>
+        <div class="footer-bottom-links">
+          <a href="#top" class="footer-back-top">Back to top ↑</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="wall.js"></script>
+  </body>
+</html>
