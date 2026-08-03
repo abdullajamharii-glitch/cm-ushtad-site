@@ -495,7 +495,10 @@
               <p>Arabic, Malayalam, Urdu, English — translation notes, public speeches, and scholarly inaugurations.</p>
             </div>
           </article>
-              <section class="section books-section" id="books">
+        </div>
+      </section>
+
+      <section class="section books-section" id="books">
 
         <!-- Section Header -->
         <div class="bk-section-header">
@@ -512,25 +515,25 @@
         <!-- Featured Book — Horizontal Editorial Strip -->
         <div class="bk-featured-strip">
           <div class="bk-featured-cover">
-            <img src="book-cover.jpg" alt="Ilmul Falak Book Cover" loading="lazy">
+            <img src="data/ente_kadha_cover.jpg" alt="Ente Kadha Vidhyabhyasathinteyum Book Cover" loading="lazy">
           </div>
           <div class="bk-featured-body">
             <div class="bk-featured-tags">
               <span class="bk-tag-feat">Featured Work</span>
-              <span class="bk-tag-cat">Astronomy · Hadith Science</span>
+              <span class="bk-tag-cat">Autobiography · Educational Vision</span>
             </div>
-            <h3>Ilmul Falak Ala Dhau'i Ilmil Hadees</h3>
-            <p class="bk-arabic-sub">علم الفلك على ضوء علم الحديث والمسائل التقديرية</p>
-            <p class="bk-featured-desc">CM Usthad's landmark treatise bridging classical Hadith traditions with astronomical calculations, lunar crescent sighting parameters, and magnetic qibla azimuth determination.</p>
+            <h3>Ente Kadha: Vidhyabhyasathinteyum</h3>
+            <p class="bk-arabic-sub">എന്റെ കഥ - വിദ്യാഭ്യാസത്തിന്റെയും | ഖാസി സി.എം. അബ്ദുള്ള മൗലവി</p>
+            <p class="bk-featured-desc">Qazi C.M. Abdulla Moulavi's landmark autobiography and educational treatise — documenting his life story, educational reform, institutional vision, public speeches, and the history of Muslim education in Kerala.</p>
             <div class="bk-featured-meta">
-              <span><em>Language</em> Arabic / Malayalam</span>
-              <span><em>Archive ID</em> MS-1993-FALAK</span>
-              <span><em>Status</em> Preserved PDF Scan</span>
+              <span><em>Language</em> Malayalam</span>
+              <span><em>Publisher</em> Book Plus</span>
+              <span><em>Author</em> Qazi C.M. Abdulla Moulavi</span>
             </div>
           </div>
           <div class="bk-featured-actions">
-            <a href="works.html" class="bk-cta-primary">Explore Bibliography →</a>
-            <a href="#contribute" class="bk-cta-ghost">Submit Copy</a>
+            <a href="https://bookplus.co.in/books/ente-kadha-vidhyabhasathinteyum/" target="_blank" rel="noreferrer" class="bk-cta-primary">Get Book on BookPlus ↗</a>
+            <a href="works.html" class="bk-cta-ghost">View All Works</a>
           </div>
         </div>
 
@@ -547,6 +550,24 @@
           </div>
 
           <div class="book-grid" id="bookGrid">
+
+            <article class="book-card" data-category="autobiography" data-title="Ente Kadha Vidhyabhyasathinteyum">
+              <div class="bk-row-cover">
+                <img src="data/ente_kadha_cover.jpg" alt="Ente Kadha Cover" loading="lazy">
+              </div>
+              <div class="bk-row-body">
+                <div class="bk-row-tags">
+                  <span class="book-label">Malayalam</span>
+                  <span class="bk-row-subject">Autobiography · Education</span>
+                </div>
+                <h3>Ente Kadha: Vidhyabhyasathinteyum</h3>
+                <p>Qazi C.M. Abdulla Moulavi's autobiography &amp; educational reform treatise published by Book Plus.</p>
+              </div>
+              <a class="book-card-link" href="https://bookplus.co.in/books/ente-kadha-vidhyabhasathinteyum/" target="_blank" rel="noreferrer">
+                <span>Get on BookPlus ↗</span>
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+              </a>
+            </article>
 
             <article class="book-card" data-category="astronomy" data-title="Magnetic Compass and Its Declination from Standard Directions">
               <div class="bk-row-cover">
@@ -606,11 +627,15 @@
         </div>
       </section>
 
-      <!-- Dedicated Digital Archive for Case Diary -->
-      <section class="section case-section" id="case-diary">
-        <div class="section-heading">
-          <p class="eyebrow">Case Diary &amp; Digital Archive</p>
-          <h2>A sober, verified public record of documents, dates, and official inquiries.</h2>
+      <section class="section case-section scroll-reveal" id="case-diary">
+        <div class="section-heading split">
+          <div>
+            <p class="eyebrow">Case Diary &amp; Digital Archive</p>
+            <h2>A sober, verified public record of documents, dates, and official inquiries.</h2>
+          </div>
+          <p class="section-desc">
+            Indexed court filings, FIR records, investigation timelines, and official press reports preserved for transparent public record.
+          </p>
         </div>
 
         <!-- Quick Sub-navigation Chips for Case Archive Categories -->
@@ -721,13 +746,15 @@
 
       </section>
 
-      <section class="section" id="articles">
-        <div class="section-heading row">
+      <section class="section articles-section scroll-reveal" id="articles">
+        <div class="section-heading split">
           <div>
-            <p class="eyebrow">Articles</p>
-            <h2>Editorial paths for long-form writing and research.</h2>
+            <p class="eyebrow">Articles &amp; Writings</p>
+            <h2>Editorial paths for long-form writing, research, and analysis.</h2>
           </div>
-          <a class="text-link" href="#contribute">Submit article</a>
+          <p class="section-desc">
+            Explore analytical papers, published articles, and commentary on astronomy, jurisprudence, and social reforms.
+          </p>
         </div>
         <div class="article-grid" id="articleGrid">
           <!-- Dynamically rendered by script.js from data/content.js -->
@@ -813,16 +840,15 @@
         </div>
       </section>
 
-      <section class="section news-section" id="news">
-        <div class="section-heading row">
+      <section class="section news-section scroll-reveal" id="news">
+        <div class="section-heading split">
           <div>
             <p class="eyebrow">News &amp; Updates</p>
             <h2>Latest announcements, research reports, and archive calls.</h2>
           </div>
-          <a href="news.html" class="news-view-all-btn">
-            <span>View All Newsroom Updates</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
+          <p class="section-desc">
+            Stay informed with current investigation reports, public announcements, and archival material calls.
+          </p>
         </div>
 
         <div class="news-grid-3col">

@@ -79,6 +79,16 @@ const DEFAULT_CONTENT = {
   ],
   books: [
     {
+      id: "book-ente-kadha",
+      title: "Ente Kadha: Vidhyabhyasathinteyum (എന്റെ കഥ - വിദ്യാഭ്യാസത്തിന്റെയും)",
+      label: "Malayalam",
+      category: "autobiography",
+      cover: "data/ente_kadha_cover.jpg",
+      description: "Autobiography and educational vision of Qazi C.M. Abdulla Moulavi, published by Book Plus.",
+      linkText: "Get on BookPlus ↗",
+      linkHref: "https://bookplus.co.in/books/ente-kadha-vidhyabhasathinteyum/"
+    },
+    {
       id: "book-1",
       title: "Magnetic Compass and Its Declination from Standard Directions",
       label: "English",
